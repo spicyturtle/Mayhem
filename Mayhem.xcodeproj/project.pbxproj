@@ -161,6 +161,8 @@
 		CAF09D231348B8F1002685A0 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = CAF09D221348B8F1002685A0 /* blocks.png */; };
 		CAF09D311348BCF1002685A0 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D301348BCF1002685A0 /* MainMenuScene.m */; };
 		CAF09D341348BD99002685A0 /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D331348BD99002685A0 /* MainMenuLayer.m */; };
+		CAF09D371348C268002685A0 /* TestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D361348C268002685A0 /* TestScene.m */; };
+		CAF09D3A1348C27B002685A0 /* TestLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D391348C27A002685A0 /* TestLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -479,6 +481,10 @@
 		CAF09D301348BCF1002685A0 /* MainMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuScene.m; sourceTree = "<group>"; };
 		CAF09D321348BD99002685A0 /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
 		CAF09D331348BD99002685A0 /* MainMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuLayer.m; sourceTree = "<group>"; };
+		CAF09D351348C268002685A0 /* TestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestScene.h; sourceTree = "<group>"; };
+		CAF09D361348C268002685A0 /* TestScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestScene.m; sourceTree = "<group>"; };
+		CAF09D381348C27A002685A0 /* TestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLayer.h; sourceTree = "<group>"; };
+		CAF09D391348C27A002685A0 /* TestLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -929,6 +935,10 @@
 		CAF09D2B1348BC3D002685A0 /* GameScenes */ = {
 			isa = PBXGroup;
 			children = (
+				CAF09D351348C268002685A0 /* TestScene.h */,
+				CAF09D361348C268002685A0 /* TestScene.m */,
+				CAF09D381348C27A002685A0 /* TestLayer.h */,
+				CAF09D391348C27A002685A0 /* TestLayer.m */,
 			);
 			name = GameScenes;
 			sourceTree = "<group>";
@@ -1139,6 +1149,8 @@
 				CAF09D201348B8F1002685A0 /* GLES-Render.mm in Sources */,
 				CAF09D311348BCF1002685A0 /* MainMenuScene.m in Sources */,
 				CAF09D341348BD99002685A0 /* MainMenuLayer.m in Sources */,
+				CAF09D371348C268002685A0 /* TestScene.m in Sources */,
+				CAF09D3A1348C27B002685A0 /* TestLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
