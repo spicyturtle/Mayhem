@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "cocos2d.h"
 
+#import "TestLayer.h"
 
 @interface TestScene : CCScene {
     
 }
+
++(TestScene *)scene;
 
 @end

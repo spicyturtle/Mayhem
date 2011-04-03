@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+#import "MainMenuLayer.h"
+
 @interface MainMenuScene : CCScene {
-    
+    MainMenuLayer *_layer;
 }
+
+@property (nonatomic, retain) MainMenuLayer *layer;
 
 +(MainMenuScene *)scene;
 

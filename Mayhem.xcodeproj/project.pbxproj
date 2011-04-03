@@ -163,6 +163,8 @@
 		CAF09D341348BD99002685A0 /* MainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D331348BD99002685A0 /* MainMenuLayer.m */; };
 		CAF09D371348C268002685A0 /* TestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D361348C268002685A0 /* TestScene.m */; };
 		CAF09D3A1348C27B002685A0 /* TestLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D391348C27A002685A0 /* TestLayer.m */; };
+		CAF09D3C1348CAF8002685A0 /* ButtonStartGame.png in Resources */ = {isa = PBXBuildFile; fileRef = CAF09D3B1348CAF8002685A0 /* ButtonStartGame.png */; };
+		CAF09D3E1348CB04002685A0 /* ButtonStartGameSel.png in Resources */ = {isa = PBXBuildFile; fileRef = CAF09D3D1348CB04002685A0 /* ButtonStartGameSel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -485,6 +487,8 @@
 		CAF09D361348C268002685A0 /* TestScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestScene.m; sourceTree = "<group>"; };
 		CAF09D381348C27A002685A0 /* TestLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLayer.h; sourceTree = "<group>"; };
 		CAF09D391348C27A002685A0 /* TestLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLayer.m; sourceTree = "<group>"; };
+		CAF09D3B1348CAF8002685A0 /* ButtonStartGame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonStartGame.png; path = Resources/ButtonStartGame.png; sourceTree = "<group>"; };
+		CAF09D3D1348CB04002685A0 /* ButtonStartGameSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonStartGameSel.png; path = Resources/ButtonStartGameSel.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -571,6 +575,8 @@
 		CAF09B5E1348B8E6002685A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CAF09D3D1348CB04002685A0 /* ButtonStartGameSel.png */,
+				CAF09D3B1348CAF8002685A0 /* ButtonStartGame.png */,
 				CAF09B5F1348B8E6002685A0 /* Default.png */,
 				CAF09B611348B8E6002685A0 /* fps_images.png */,
 				CAF09B631348B8E6002685A0 /* Icon-72.png */,
@@ -1003,6 +1009,8 @@
 				CAF09B6E1348B8E7002685A0 /* Icon@2x.png in Resources */,
 				CAF09B711348B8E7002685A0 /* iTunesArtwork in Resources */,
 				CAF09D231348B8F1002685A0 /* blocks.png in Resources */,
+				CAF09D3C1348CAF8002685A0 /* ButtonStartGame.png in Resources */,
+				CAF09D3E1348CB04002685A0 /* ButtonStartGameSel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

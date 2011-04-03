@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+#import "TestScene.h"
+
 @interface MainMenuLayer : CCLayerColor {
-    
+    CCLabelTTF *_title;
 }
+
+@property (nonatomic, retain) CCLabelTTF *title;
 
 @end

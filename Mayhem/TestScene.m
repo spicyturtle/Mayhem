@@ -11,4 +11,14 @@
 
 @implementation TestScene
 
+
++(TestScene *)scene
+{
+    // Create a MainMenuScene
+    TestScene *scene = [TestScene node];
+    
+    // Return The scene
+    return scene;
+}
+
 @end
