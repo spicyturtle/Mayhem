@@ -165,6 +165,7 @@
 		CAF09D3A1348C27B002685A0 /* TestLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D391348C27A002685A0 /* TestLayer.m */; };
 		CAF09D3C1348CAF8002685A0 /* ButtonStartGame.png in Resources */ = {isa = PBXBuildFile; fileRef = CAF09D3B1348CAF8002685A0 /* ButtonStartGame.png */; };
 		CAF09D3E1348CB04002685A0 /* ButtonStartGameSel.png in Resources */ = {isa = PBXBuildFile; fileRef = CAF09D3D1348CB04002685A0 /* ButtonStartGameSel.png */; };
+		CAF09D431348D009002685A0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D421348D009002685A0 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -489,6 +490,8 @@
 		CAF09D391348C27A002685A0 /* TestLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLayer.m; sourceTree = "<group>"; };
 		CAF09D3B1348CAF8002685A0 /* ButtonStartGame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonStartGame.png; path = Resources/ButtonStartGame.png; sourceTree = "<group>"; };
 		CAF09D3D1348CB04002685A0 /* ButtonStartGameSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonStartGameSel.png; path = Resources/ButtonStartGameSel.png; sourceTree = "<group>"; };
+		CAF09D411348D009002685A0 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		CAF09D421348D009002685A0 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -545,6 +548,7 @@
 		CAF09B5D1348B8E6002685A0 /* Mayhem */ = {
 			isa = PBXGroup;
 			children = (
+				CAF09D3F1348CFDB002685A0 /* GameObjects */,
 				CAF09D291348BC2B002685A0 /* Scenes */,
 				CAF09C631348B8ED002685A0 /* LICENSE_cocos2d.txt */,
 				CAF09C721348B8ED002685A0 /* LICENSE_CocosDenshion.txt */,
@@ -949,6 +953,23 @@
 			name = GameScenes;
 			sourceTree = "<group>";
 		};
+		CAF09D3F1348CFDB002685A0 /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				CAF09D401348CFE9002685A0 /* Player */,
+			);
+			name = GameObjects;
+			sourceTree = "<group>";
+		};
+		CAF09D401348CFE9002685A0 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				CAF09D411348D009002685A0 /* Player.h */,
+				CAF09D421348D009002685A0 /* Player.m */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1159,6 +1180,7 @@
 				CAF09D341348BD99002685A0 /* MainMenuLayer.m in Sources */,
 				CAF09D371348C268002685A0 /* TestScene.m in Sources */,
 				CAF09D3A1348C27B002685A0 /* TestLayer.m in Sources */,
+				CAF09D431348D009002685A0 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
