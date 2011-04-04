@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA45CFC8134A4ABC0035A38A /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = CA45CFC7134A4ABC0035A38A /* player.png */; };
 		CAF09B4E1348B8E6002685A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF09B4D1348B8E6002685A0 /* QuartzCore.framework */; };
 		CAF09B501348B8E6002685A0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF09B4F1348B8E6002685A0 /* OpenGLES.framework */; };
 		CAF09B521348B8E6002685A0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF09B511348B8E6002685A0 /* OpenAL.framework */; };
@@ -169,6 +170,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA45CFC7134A4ABC0035A38A /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = Resources/player.png; sourceTree = "<group>"; };
 		CAF09B491348B8E6002685A0 /* Mayhem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mayhem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF09B4D1348B8E6002685A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CAF09B4F1348B8E6002685A0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -579,6 +581,7 @@
 		CAF09B5E1348B8E6002685A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CA45CFC7134A4ABC0035A38A /* player.png */,
 				CAF09D3D1348CB04002685A0 /* ButtonStartGameSel.png */,
 				CAF09D3B1348CAF8002685A0 /* ButtonStartGame.png */,
 				CAF09B5F1348B8E6002685A0 /* Default.png */,
@@ -1032,6 +1035,7 @@
 				CAF09D231348B8F1002685A0 /* blocks.png in Resources */,
 				CAF09D3C1348CAF8002685A0 /* ButtonStartGame.png in Resources */,
 				CAF09D3E1348CB04002685A0 /* ButtonStartGameSel.png in Resources */,
+				CA45CFC8134A4ABC0035A38A /* player.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1276,6 +1280,7 @@
 				CAF09D281348B8F1002685A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

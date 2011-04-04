@@ -17,6 +17,10 @@
     // Create a MainMenuScene
     TestScene *scene = [TestScene node];
     
+    // Add a TestLayer to scene
+    TestLayer *layer = [TestLayer node];
+    [scene  addChild:layer];
+    
     // Return The scene
     return scene;
 }

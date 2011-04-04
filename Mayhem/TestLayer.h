@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "Player.h"
 
 @interface TestLayer : CCLayerColor {
-    
+    Player *_player;
 }
-
+@property (nonatomic, retain) Player *player;
 @end

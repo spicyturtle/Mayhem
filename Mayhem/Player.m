@@ -11,4 +11,19 @@
 
 @implementation Player
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        // Set self to be a Sprite from a file.
+        self = [CCSprite spriteWithFile:@"player.png" rect:CGRectMake(0, 0, 64, 64)];
+    }
+    return self;
+}
+
+- (void)dealloc {
+    
+    // Must have
+    [super dealloc];
+}
+
 @end
