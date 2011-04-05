@@ -1,5 +1,5 @@
 //
-//  MainMenuScene.m
+//  MainMenuScene.mm
 //  Mayhem
 //
 //  Created by Tor Kreutzer on 4/3/11.

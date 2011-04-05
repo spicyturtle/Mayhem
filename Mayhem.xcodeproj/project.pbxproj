@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA45CFC8134A4ABC0035A38A /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = CA45CFC7134A4ABC0035A38A /* player.png */; };
+		CA45D049134B25DB0035A38A /* World.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA45D048134B25DB0035A38A /* World.mm */; };
 		CAF09B4E1348B8E6002685A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF09B4D1348B8E6002685A0 /* QuartzCore.framework */; };
 		CAF09B501348B8E6002685A0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF09B4F1348B8E6002685A0 /* OpenGLES.framework */; };
 		CAF09B521348B8E6002685A0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF09B511348B8E6002685A0 /* OpenAL.framework */; };
@@ -172,6 +173,8 @@
 /* Begin PBXFileReference section */
 		CA45CFC7134A4ABC0035A38A /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = Resources/player.png; sourceTree = "<group>"; };
 		CA45D042134B17D10035A38A /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		CA45D047134B25DB0035A38A /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		CA45D048134B25DB0035A38A /* World.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = World.mm; sourceTree = "<group>"; };
 		CAF09B491348B8E6002685A0 /* Mayhem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mayhem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF09B4D1348B8E6002685A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CAF09B4F1348B8E6002685A0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -516,6 +519,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA45D043134B1EEB0035A38A /* World */ = {
+			isa = PBXGroup;
+			children = (
+				CA45D047134B25DB0035A38A /* World.h */,
+				CA45D048134B25DB0035A38A /* World.mm */,
+			);
+			name = World;
+			sourceTree = "<group>";
+		};
 		CAF09B3E1348B8E6002685A0 = {
 			isa = PBXGroup;
 			children = (
@@ -961,6 +973,7 @@
 		CAF09D3F1348CFDB002685A0 /* GameObjects */ = {
 			isa = PBXGroup;
 			children = (
+				CA45D043134B1EEB0035A38A /* World */,
 				CAF09D401348CFE9002685A0 /* Player */,
 			);
 			name = GameObjects;
@@ -1187,6 +1200,7 @@
 				CAF09D371348C268002685A0 /* TestScene.mm in Sources */,
 				CAF09D3A1348C27B002685A0 /* TestLayer.mm in Sources */,
 				CAF09D431348D009002685A0 /* Player.mm in Sources */,
+				CA45D049134B25DB0035A38A /* World.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
