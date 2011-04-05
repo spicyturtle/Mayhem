@@ -171,6 +171,7 @@
 
 /* Begin PBXFileReference section */
 		CA45CFC7134A4ABC0035A38A /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = Resources/player.png; sourceTree = "<group>"; };
+		CA45D042134B17D10035A38A /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		CAF09B491348B8E6002685A0 /* Mayhem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mayhem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF09B4D1348B8E6002685A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CAF09B4F1348B8E6002685A0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -550,6 +551,7 @@
 		CAF09B5D1348B8E6002685A0 /* Mayhem */ = {
 			isa = PBXGroup;
 			children = (
+				CA45D042134B17D10035A38A /* Common.h */,
 				CAF09D3F1348CFDB002685A0 /* GameObjects */,
 				CAF09D291348BC2B002685A0 /* Scenes */,
 				CAF09C631348B8ED002685A0 /* LICENSE_cocos2d.txt */,
