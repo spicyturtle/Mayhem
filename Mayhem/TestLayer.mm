@@ -56,6 +56,8 @@
         self.player.position = ccp(winSize.width/2, winSize.height/2);
         [self addChild:_player];
         
+        [self runAction:[CCFollow actionWithTarget:_player]];
+        
         [self schedule:@selector(tick:)];
         
     }
