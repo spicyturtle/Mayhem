@@ -44,6 +44,8 @@
         playerShapeDef.restitution = 0.1f;
         _playerFixture = _playerBody->CreateFixture(&playerShapeDef);
         
+        // Set initial fuel value
+        _fuel = 10.0f;
     }
     
     return self;
@@ -76,6 +78,7 @@
     
     b2Vec2 pointOfImpulse = _playerBody->GetPosition();
     _playerBody->ApplyLinearImpulse(impulse, pointOfImpulse);
+
 }
 
 - (void)dealloc {

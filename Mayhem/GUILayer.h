@@ -13,7 +13,7 @@
 #import "Common.h"
 
 @interface GUILayer : CCLayerColor {
-    
+
 }
 
 +(GUILayer *)GUIToPlayer:(Player *)player;

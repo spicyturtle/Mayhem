@@ -15,6 +15,8 @@
 @interface Player : CCSprite {
     b2Body *_playerBody;
     b2Fixture *_playerFixture;
+    
+    float _fuel;
 }
 
 +(Player *)playerInWorld:(b2World *)world;
