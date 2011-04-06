@@ -13,6 +13,11 @@
 
 @synthesize player = _player;
 
++(TestLayer *)layerWithWorld:(b2World *)world andPlayer:(Player *)player
+{
+    return [[self alloc] initWithWorld:world andPlayer:player];
+}
+
 - (id)init {
     self = [super init];
     if (self) {
@@ -28,6 +33,26 @@
         [self addChild:_player];
         
         [self runAction:[CCFollow actionWithTarget:_player]];
+        
+        [self schedule:@selector(tick:)];
+        
+    }
+    return self;
+}
+
+- (id)initWithWorld: (b2World *)world andPlayer:(Player *)player {
+    self = [super initWithColor:ccc4(0, 0, 0, 0)];
+    if (self) {
+        
+        CGSize winSize = GET_WINSIZE();
+        
+        _world = world;
+        
+        // Add objects to layer here
+        self.player = player;
+        [self addChild:_player];
+        
+        [self runAction:[CCFollow actionWithTarget:_player worldBoundary:CGRectMake(0, 0, winSize.width, winSize.height)]];
         
         [self schedule:@selector(tick:)];
         

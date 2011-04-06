@@ -18,8 +18,12 @@
     
     // Box2D world object
     b2World *_world;
-    
-    Player *_player;
+
 }
 @property (nonatomic, retain) Player *player;
+
++(TestLayer *)layerWithWorld:(b2World *)world andPlayer:(Player *)player;
+
+-(id)initWithWorld: (b2World *)world andPlayer:(Player *)player;
+
 @end

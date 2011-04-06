@@ -17,6 +17,14 @@
     b2Fixture *_playerFixture;
 }
 
++(Player *)playerInWorld:(b2World *)world;
+
 -(id)initWithWorld:(b2World *)world;
+
+// Control methods
+-(void) turnLeft;
+-(void) turnRight;
+-(void) fire;
+-(void) accelerate;
 
 @end

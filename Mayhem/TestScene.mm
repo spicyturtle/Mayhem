@@ -11,18 +11,47 @@
 
 @implementation TestScene
 
+@synthesize player = _player;
+@synthesize world = _world;
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        
+        // Create world
+        self.world = [World getWorld];
+        
+        // Create player
+        self.player = [Player playerInWorld:_world];
+    }
+    return self;
+}
 
 +(TestScene *)scene
 {
     // Create a MainMenuScene
     TestScene *scene = [TestScene node];
-    
+
     // Add a TestLayer to scene
-    TestLayer *layer = [TestLayer node];
+    TestLayer *layer = [TestLayer layerWithWorld:scene->_world andPlayer:scene->_player];
     [scene  addChild:layer];
+    
+    // Add  GUILayer that reacts with the player.
+    GUILayer *gui = [GUILayer GUIToPlayer:scene.player];
+    [scene addChild:gui];
     
     // Return The scene
     return scene;
+}
+
+-(void)dealloc
+{
+    delete _world;
+    
+    // Uncertain on this one..
+    [_player release];
+    
+    [super dealloc];
 }
 
 @end

@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		CA45CFC8134A4ABC0035A38A /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = CA45CFC7134A4ABC0035A38A /* player.png */; };
 		CA45D049134B25DB0035A38A /* World.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA45D048134B25DB0035A38A /* World.mm */; };
+		CA45D04D134B27D80035A38A /* GUILayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA45D04C134B27D80035A38A /* GUILayer.mm */; };
+		CAD61A98134B2FA700864A99 /* ButtonLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD61A90134B2FA700864A99 /* ButtonLeft.png */; };
+		CAD61A99134B2FA700864A99 /* ButtonLeftSel.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD61A91134B2FA700864A99 /* ButtonLeftSel.png */; };
+		CAD61A9A134B2FA700864A99 /* ButtonRight.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD61A92134B2FA700864A99 /* ButtonRight.png */; };
+		CAD61A9B134B2FA700864A99 /* ButtonRightSel.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD61A93134B2FA700864A99 /* ButtonRightSel.png */; };
+		CAD61A9C134B2FA700864A99 /* ButtonFire.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD61A94134B2FA700864A99 /* ButtonFire.png */; };
+		CAD61A9D134B2FA700864A99 /* ButtonFireSel.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD61A95134B2FA700864A99 /* ButtonFireSel.png */; };
+		CAD61A9E134B2FA700864A99 /* ButtonAccelerate.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD61A96134B2FA700864A99 /* ButtonAccelerate.png */; };
+		CAD61A9F134B2FA700864A99 /* ButtonAccelerateSel.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD61A97134B2FA700864A99 /* ButtonAccelerateSel.png */; };
 		CAF09B4E1348B8E6002685A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF09B4D1348B8E6002685A0 /* QuartzCore.framework */; };
 		CAF09B501348B8E6002685A0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF09B4F1348B8E6002685A0 /* OpenGLES.framework */; };
 		CAF09B521348B8E6002685A0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF09B511348B8E6002685A0 /* OpenAL.framework */; };
@@ -175,6 +184,16 @@
 		CA45D042134B17D10035A38A /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		CA45D047134B25DB0035A38A /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
 		CA45D048134B25DB0035A38A /* World.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = World.mm; sourceTree = "<group>"; };
+		CA45D04B134B27D80035A38A /* GUILayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUILayer.h; sourceTree = "<group>"; };
+		CA45D04C134B27D80035A38A /* GUILayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GUILayer.mm; sourceTree = "<group>"; };
+		CAD61A90134B2FA700864A99 /* ButtonLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLeft.png; sourceTree = "<group>"; };
+		CAD61A91134B2FA700864A99 /* ButtonLeftSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLeftSel.png; sourceTree = "<group>"; };
+		CAD61A92134B2FA700864A99 /* ButtonRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonRight.png; sourceTree = "<group>"; };
+		CAD61A93134B2FA700864A99 /* ButtonRightSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonRightSel.png; sourceTree = "<group>"; };
+		CAD61A94134B2FA700864A99 /* ButtonFire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonFire.png; sourceTree = "<group>"; };
+		CAD61A95134B2FA700864A99 /* ButtonFireSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonFireSel.png; sourceTree = "<group>"; };
+		CAD61A96134B2FA700864A99 /* ButtonAccelerate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonAccelerate.png; sourceTree = "<group>"; };
+		CAD61A97134B2FA700864A99 /* ButtonAccelerateSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonAccelerateSel.png; sourceTree = "<group>"; };
 		CAF09B491348B8E6002685A0 /* Mayhem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mayhem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAF09B4D1348B8E6002685A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CAF09B4F1348B8E6002685A0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -528,6 +547,15 @@
 			name = World;
 			sourceTree = "<group>";
 		};
+		CA45D04A134B27AE0035A38A /* GUILayer */ = {
+			isa = PBXGroup;
+			children = (
+				CA45D04B134B27D80035A38A /* GUILayer.h */,
+				CA45D04C134B27D80035A38A /* GUILayer.mm */,
+			);
+			name = GUILayer;
+			sourceTree = "<group>";
+		};
 		CAF09B3E1348B8E6002685A0 = {
 			isa = PBXGroup;
 			children = (
@@ -595,6 +623,14 @@
 		CAF09B5E1348B8E6002685A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CAD61A90134B2FA700864A99 /* ButtonLeft.png */,
+				CAD61A91134B2FA700864A99 /* ButtonLeftSel.png */,
+				CAD61A92134B2FA700864A99 /* ButtonRight.png */,
+				CAD61A93134B2FA700864A99 /* ButtonRightSel.png */,
+				CAD61A94134B2FA700864A99 /* ButtonFire.png */,
+				CAD61A95134B2FA700864A99 /* ButtonFireSel.png */,
+				CAD61A96134B2FA700864A99 /* ButtonAccelerate.png */,
+				CAD61A97134B2FA700864A99 /* ButtonAccelerateSel.png */,
 				CA45CFC7134A4ABC0035A38A /* player.png */,
 				CAF09D3D1348CB04002685A0 /* ButtonStartGameSel.png */,
 				CAF09D3B1348CAF8002685A0 /* ButtonStartGame.png */,
@@ -942,6 +978,7 @@
 		CAF09D291348BC2B002685A0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CA45D04A134B27AE0035A38A /* GUILayer */,
 				CAF09D2B1348BC3D002685A0 /* GameScenes */,
 				CAF09D2A1348BC32002685A0 /* MainMenuScene */,
 			);
@@ -1051,6 +1088,14 @@
 				CAF09D3C1348CAF8002685A0 /* ButtonStartGame.png in Resources */,
 				CAF09D3E1348CB04002685A0 /* ButtonStartGameSel.png in Resources */,
 				CA45CFC8134A4ABC0035A38A /* player.png in Resources */,
+				CAD61A98134B2FA700864A99 /* ButtonLeft.png in Resources */,
+				CAD61A99134B2FA700864A99 /* ButtonLeftSel.png in Resources */,
+				CAD61A9A134B2FA700864A99 /* ButtonRight.png in Resources */,
+				CAD61A9B134B2FA700864A99 /* ButtonRightSel.png in Resources */,
+				CAD61A9C134B2FA700864A99 /* ButtonFire.png in Resources */,
+				CAD61A9D134B2FA700864A99 /* ButtonFireSel.png in Resources */,
+				CAD61A9E134B2FA700864A99 /* ButtonAccelerate.png in Resources */,
+				CAD61A9F134B2FA700864A99 /* ButtonAccelerateSel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1201,6 +1246,7 @@
 				CAF09D3A1348C27B002685A0 /* TestLayer.mm in Sources */,
 				CAF09D431348D009002685A0 /* Player.mm in Sources */,
 				CA45D049134B25DB0035A38A /* World.mm in Sources */,
+				CA45D04D134B27D80035A38A /* GUILayer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
