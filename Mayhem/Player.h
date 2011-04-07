@@ -11,6 +11,7 @@
 #import "Box2D.h"
 
 #import "Common.h"
+#import "Weapon.h"
 
 @interface Player : CCSprite {
     b2Body *_playerBody;
@@ -24,7 +25,7 @@
 // Control methods
 -(void) turnLeft;
 -(void) turnRight;
--(void) fire;
+-(Weapon*) fire;
 -(void) accelerate;
 
 @end

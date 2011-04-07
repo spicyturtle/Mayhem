@@ -11,6 +11,7 @@
 
 #import "Player.h"
 #import "Common.h"
+#import "Weapon.h"
 
 @interface GUILayer : CCLayerColor {
     

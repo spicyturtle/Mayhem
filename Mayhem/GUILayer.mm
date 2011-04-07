@@ -35,7 +35,15 @@
         
         // Fire
         CCMenuItem *fireButton;
-        fireButton = [CCMenuItemImage itemFromNormalImage:@"ButtonFire.png" selectedImage:@"ButtonFireSel.png" target:player selector:@selector(fire)];
+        fireButton = [CCMenuItemImage itemFromNormalImage:@"ButtonFire.png" selectedImage:@"ButtonFireSel.png" block: ^(id sender)
+                      {
+                          Weapon *bullet = [player fire];
+                           
+                          bullet.position = ccp(100,100);
+                          
+                          [player.parent addChild:bullet];
+                    
+                      }];
         fireButton.position = ccp(winSize.width - 60 ,60);  
         
         // Thrust

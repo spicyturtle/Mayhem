@@ -8,7 +8,6 @@
 
 #import "Player.h"
 
-
 @implementation Player
 
 +(Player *)playerInWorld:(b2World *)world
@@ -60,9 +59,16 @@
     _playerBody->ApplyAngularImpulse(-8.0f);
 }
 
--(void)fire
+-(Weapon*)fire
 {
-    printf("fire\n");
+    b2World *world = _playerBody->GetWorld();
+    
+    b2Vec2 testpoint = _playerBody->GetPosition();
+    
+    Weapon *bullet = [[Weapon alloc] initWithWorld:world point:testpoint];
+    
+    return bullet;
+    
 }
 
 -(void)accelerate
