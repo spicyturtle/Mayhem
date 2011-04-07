@@ -25,9 +25,9 @@
 
         // Testing SpriteHelper
         
-        int player_positionX = winSize.width/2; //PUT YOUR OWN VALUE HERE
-        int player_positionY = winSize.height/2; //PUT YOUR OWN VALUE HERE
-
+        int player_positionX = winSize.width/2; 
+        int player_positionY = winSize.height/2;
+        
         position_ = ccp(player_positionX, player_positionY);
         b2BodyDef player_BodyDef;
         player_BodyDef.type = b2_dynamicBody;

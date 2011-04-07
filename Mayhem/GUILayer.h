@@ -11,6 +11,7 @@
 
 #import "Player.h"
 #import "Common.h"
+#import "MenuButton.h"
 
 @interface GUILayer : CCLayerColor {
 

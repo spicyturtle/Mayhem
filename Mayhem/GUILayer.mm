@@ -22,6 +22,24 @@
         // Get winSize
         CGSize winSize = GET_WINSIZE();
         
+        // Set touch enabled
+        self.isTouchEnabled = YES;
+        
+        // Create button sprites
+        
+        // Turn Left
+        MenuButton *leftButton = [MenuButton buttonFromFile:@"ButtonLeft.png" Target:player selector:@selector(turnLeft)];
+        leftButton.position = ccp(60.0, 60.0);
+        [self addChild:leftButton];
+        
+        // Turn Right
+        
+        // Fire
+        
+        // Accelerate
+        
+        /*
+        
         // Create the four controller buttons
         // Turn left
         CCMenuItem *turnLeftButton;
@@ -49,13 +67,28 @@
         gui.position = CGPointZero;
         
         [self addChild:gui];
+         
+         */
     }
     return self;
 }
 
--(void)turnLeft:(id)sender
+-(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    printf("Began\n");
     
+    // Check to see if a button was pressed
+    
+}
+
+-(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    printf("Ended\n");    
+}
+
+-(void)ccTouchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    printf("Canceled\n");
 }
 
 @end
