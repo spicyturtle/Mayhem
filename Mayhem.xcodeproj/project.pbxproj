@@ -556,6 +556,13 @@
 			name = GUILayer;
 			sourceTree = "<group>";
 		};
+		CAD61B1C134CC46400864A99 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
 		CAF09B3E1348B8E6002685A0 = {
 			isa = PBXGroup;
 			children = (
@@ -623,6 +630,7 @@
 		CAF09B5E1348B8E6002685A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CAD61B1C134CC46400864A99 /* Maps */,
 				CAD61A90134B2FA700864A99 /* ButtonLeft.png */,
 				CAD61A91134B2FA700864A99 /* ButtonLeftSel.png */,
 				CAD61A92134B2FA700864A99 /* ButtonRight.png */,

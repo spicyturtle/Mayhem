@@ -47,7 +47,7 @@
         CGSize winSize = GET_WINSIZE();
         
         _world = world;
-        
+
         // Add objects to layer here
         self.player = player;
         [self addChild:_player];
