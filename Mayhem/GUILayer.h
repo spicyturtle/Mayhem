@@ -14,7 +14,7 @@
 #import "Weapon.h"
 
 @interface GUILayer : CCLayerColor {
-    
+
 }
 
 +(GUILayer *)GUIToPlayer:(Player *)player;
