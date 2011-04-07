@@ -29,7 +29,6 @@
                 
         // Add objects to layer here
         self.player = [[Player alloc] initWithWorld:_world];
-        self.player.position = ccp(winSize.width/2, winSize.height/2);
         [self addChild:_player];
         
         [self runAction:[CCFollow actionWithTarget:_player]];
@@ -51,6 +50,10 @@
         // Add objects to layer here
         self.player = player;
         [self addChild:_player];
+        
+        StaticEnemy *enemy1;
+        enemy1 = [StaticEnemy enemyInWorld:_world];
+        [self addChild:enemy1];
         
         [self runAction:[CCFollow actionWithTarget:_player worldBoundary:CGRectMake(0, 0, winSize.width, winSize.height)]];
         

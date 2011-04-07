@@ -12,6 +12,7 @@
 
 #import "Common.h"
 #import "Player.h"
+#import "StaticEnemy.h"
 #import "World.h"
 
 @interface TestLayer : CCLayerColor {
