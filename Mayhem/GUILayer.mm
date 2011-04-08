@@ -38,8 +38,6 @@
         fireButton = [CCMenuItemImage itemFromNormalImage:@"ButtonFire.png" selectedImage:@"ButtonFireSel.png" block: ^(id sender)
                       {
                           Weapon *bullet = [player fire];
-                           
-                          bullet.position = ccp(100,100);
                           
                           [player.parent addChild:bullet];
                     

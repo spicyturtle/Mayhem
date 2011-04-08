@@ -80,7 +80,7 @@
     
     b2Vec2 testpoint = _playerBody->GetPosition();
     
-    Weapon *bullet = [[Weapon alloc] initWithWorld:world point:testpoint];
+    Weapon *bullet = [[Weapon alloc] initWithWorld:world point:testpoint angle:_playerBody->GetAngle()];
     
     return bullet;
     
@@ -88,7 +88,7 @@
 
 -(void)accelerate
 {
-    float32 magnitude = 8.0f;
+    float32 magnitude = 8.0f ;
     // Calculate current rotation
     float32 rot = _playerBody->GetAngle();
     
@@ -99,6 +99,7 @@
     _playerBody->ApplyLinearImpulse(impulse, pointOfImpulse);
 
 }
+
 
 - (void)dealloc {
     

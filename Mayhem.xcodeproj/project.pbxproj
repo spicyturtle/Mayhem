@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F125236134DD9440050418B /* greenLaserRay.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F125235134DD9440050418B /* greenLaserRay.png */; };
+		3F12523A134DF0B90050418B /* redLaserRay.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F125239134DF0B90050418B /* redLaserRay.png */; };
 		3FEE4D12134CBA9E00208F48 /* Weapon.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3FEE4D11134CBA9E00208F48 /* Weapon.mm */; };
-		3FEE4D16134CBCC100208F48 /* greenLaserRay.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE4D15134CBCC100208F48 /* greenLaserRay.png */; };
 		CA45CFC8134A4ABC0035A38A /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = CA45CFC7134A4ABC0035A38A /* player.png */; };
 		CA45D049134B25DB0035A38A /* World.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA45D048134B25DB0035A38A /* World.mm */; };
 		CA45D04D134B27D80035A38A /* GUILayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA45D04C134B27D80035A38A /* GUILayer.mm */; };
@@ -184,9 +185,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F125235134DD9440050418B /* greenLaserRay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenLaserRay.png; sourceTree = "<group>"; };
+		3F125239134DF0B90050418B /* redLaserRay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redLaserRay.png; sourceTree = "<group>"; };
 		3FEE4D10134CBA9E00208F48 /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weapon.h; sourceTree = "<group>"; };
 		3FEE4D11134CBA9E00208F48 /* Weapon.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Weapon.mm; sourceTree = "<group>"; };
-		3FEE4D15134CBCC100208F48 /* greenLaserRay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenLaserRay.png; sourceTree = "<group>"; };
 		CA45CFC7134A4ABC0035A38A /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = Resources/player.png; sourceTree = "<group>"; };
 		CA45D042134B17D10035A38A /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		CA45D047134B25DB0035A38A /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
@@ -658,7 +660,8 @@
 		CAF09B5E1348B8E6002685A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3FEE4D15134CBCC100208F48 /* greenLaserRay.png */,
+				3F125239134DF0B90050418B /* redLaserRay.png */,
+				3F125235134DD9440050418B /* greenLaserRay.png */,
 				CAD61B34134DBC6D00864A99 /* StaticEnemy.png */,
 				CAD61B1C134CC46400864A99 /* Maps */,
 				CAD61A90134B2FA700864A99 /* ButtonLeft.png */,
@@ -1136,8 +1139,9 @@
 				CAD61A9D134B2FA700864A99 /* ButtonFireSel.png in Resources */,
 				CAD61A9E134B2FA700864A99 /* ButtonAccelerate.png in Resources */,
 				CAD61A9F134B2FA700864A99 /* ButtonAccelerateSel.png in Resources */,
-				3FEE4D16134CBCC100208F48 /* greenLaserRay.png in Resources */,
 				CAD61B35134DBC6D00864A99 /* StaticEnemy.png in Resources */,
+				3F125236134DD9440050418B /* greenLaserRay.png in Resources */,
+				3F12523A134DF0B90050418B /* redLaserRay.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
