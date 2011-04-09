@@ -15,6 +15,7 @@
 		CA45CFC8134A4ABC0035A38A /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = CA45CFC7134A4ABC0035A38A /* player.png */; };
 		CA45D049134B25DB0035A38A /* World.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA45D048134B25DB0035A38A /* World.mm */; };
 		CA45D04D134B27D80035A38A /* GUILayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA45D04C134B27D80035A38A /* GUILayer.mm */; };
+		CA9873BB134DE2260053978A /* MenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9873BA134DE2260053978A /* MenuButton.m */; };
 		CAD61A98134B2FA700864A99 /* ButtonLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD61A90134B2FA700864A99 /* ButtonLeft.png */; };
 		CAD61A99134B2FA700864A99 /* ButtonLeftSel.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD61A91134B2FA700864A99 /* ButtonLeftSel.png */; };
 		CAD61A9A134B2FA700864A99 /* ButtonRight.png in Resources */ = {isa = PBXBuildFile; fileRef = CAD61A92134B2FA700864A99 /* ButtonRight.png */; };
@@ -199,6 +200,10 @@
 		CA45D048134B25DB0035A38A /* World.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = World.mm; sourceTree = "<group>"; };
 		CA45D04B134B27D80035A38A /* GUILayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GUILayer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		CA45D04C134B27D80035A38A /* GUILayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = GUILayer.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CA45D04B134B27D80035A38A /* GUILayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUILayer.h; sourceTree = "<group>"; };
+		CA45D04C134B27D80035A38A /* GUILayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GUILayer.mm; sourceTree = "<group>"; };
+		CA9873B9134DE2260053978A /* MenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuButton.h; sourceTree = "<group>"; };
+		CA9873BA134DE2260053978A /* MenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuButton.m; sourceTree = "<group>"; };
 		CAD61A90134B2FA700864A99 /* ButtonLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLeft.png; sourceTree = "<group>"; };
 		CAD61A91134B2FA700864A99 /* ButtonLeftSel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonLeftSel.png; sourceTree = "<group>"; };
 		CAD61A92134B2FA700864A99 /* ButtonRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonRight.png; sourceTree = "<group>"; };
@@ -595,6 +600,15 @@
 			name = GUILayer;
 			sourceTree = "<group>";
 		};
+		CA9873B7134DE1F60053978A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CA9873B9134DE2260053978A /* MenuButton.h */,
+				CA9873BA134DE2260053978A /* MenuButton.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
 		CAD61B1C134CC46400864A99 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +660,7 @@
 		CAF09B5D1348B8E6002685A0 /* Mayhem */ = {
 			isa = PBXGroup;
 			children = (
+				CA9873B7134DE1F60053978A /* Menu */,
 				CA45D042134B17D10035A38A /* Common.h */,
 				CAF09D3F1348CFDB002685A0 /* GameObjects */,
 				CAF09D291348BC2B002685A0 /* Scenes */,
@@ -1315,6 +1330,7 @@
 				3FEE4D12134CBA9E00208F48 /* Weapon.mm in Sources */,
 				CAD61B33134DBA6E00864A99 /* StaticEnemy.mm in Sources */,
 				3FA4975E134EEEAF0079D2B5 /* MyContactListener.mm in Sources */,
+				CA9873BB134DE2260053978A /* MenuButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
