@@ -21,13 +21,12 @@
     self = [super initWithFile:@"StaticEnemy.png"];
     if (self) {
         // Initialize enemy
-        
-//        CGSize winSize = GET_WINSIZE();
-        
+        self.tag = ENEMY;
+            
         // Create enemy body
         b2BodyDef bodyDef;
-        bodyDef.type = b2_staticBody;
-        bodyDef.position.Set(60.0/PTM_RATIO, 160.0/PTM_RATIO);
+        bodyDef.type = b2_dynamicBody;
+        bodyDef.position.Set(self.contentSize.width/PTM_RATIO, self.contentSize.height/PTM_RATIO);
         bodyDef.userData = self;
         _body = world->CreateBody(&bodyDef);
         
@@ -39,12 +38,35 @@
         b2FixtureDef shapeDef;
         shapeDef.shape = &shape;
         shapeDef.density = 1.0f;
-        shapeDef.friction = 1.0f;
+        shapeDef.friction = 0.0f;
         shapeDef.restitution = 0.1f;
         _fixture = _body->CreateFixture(&shapeDef);
+        
+        _body->SetAngularDamping(0.0f);
+        _body->ApplyAngularImpulse(1.0f);
+        _body->SetLinearVelocity(b2Vec2(0.0f,0.5f));
+        
+        
+        [self schedule:@selector(enemyGameLogic:) interval:0.0f];
         
     }
     return self;
 }
 
+- (void)fire {
+    b2World *world = _body->GetWorld();
+    b2Vec2 pos = _body->GetPosition();
+    float32 angle = _body->GetAngle();
+    
+    Weapon *bullet = [[Weapon alloc] initWithWorld:world point:pos angle:angle size:self.contentSize type:ENEMY_WEAPON];
+
+    [self.parent addChild:bullet];
+
+}
+
+
+-(void)enemyGameLogic:(ccTime)dt {
+    
+    [self fire];
+}
 @end

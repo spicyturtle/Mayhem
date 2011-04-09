@@ -14,11 +14,16 @@
 #import "Player.h"
 #import "StaticEnemy.h"
 #import "World.h"
+#import "MyContactListener.h"
 
 @interface TestLayer : CCLayerColor {
     
     // Box2D world object
     b2World *_world;
+    
+    // Contact Listener
+    MyContactListener *_contactListener;
+
 
 }
 @property (nonatomic, retain) Player *player;

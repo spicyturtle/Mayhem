@@ -8,7 +8,6 @@
 
 #import "TestLayer.h"
 
-
 @implementation TestLayer
 
 @synthesize player = _player;
@@ -21,9 +20,6 @@
 - (id)init {
     self = [super init];
     if (self) {
-        
-        // Get winSize
-        CGSize winSize = GET_WINSIZE();
         
         _world = [World getWorld];
                 
@@ -43,13 +39,22 @@
     self = [super initWithColor:ccc4(0, 0, 0, 0)];
     if (self) {
         
-        CGSize winSize = GET_WINSIZE();
+        CGSize winSize = CGSizeMake(1920.0f, 1200.0f);
         
         _world = world;
+        
+        CCSprite* background = [CCSprite spriteWithFile:@"background.jpg"];
+        background.tag = 1;
+        background.anchorPoint = CGPointMake(0, 0);
+        [self addChild:background];
 
         // Add objects to layer here
         self.player = player;
         [self addChild:_player];
+        
+        // Add Contact Listener
+        _contactListener = new MyContactListener();
+        _world->SetContactListener(_contactListener);
         
         StaticEnemy *enemy1;
         enemy1 = [StaticEnemy enemyInWorld:_world];
@@ -58,8 +63,8 @@
         [self runAction:[CCFollow actionWithTarget:_player worldBoundary:CGRectMake(0, 0, winSize.width, winSize.height)]];
         
         [self schedule:@selector(tick:)];
-        
     }
+    
     return self;
 }
 
@@ -74,6 +79,99 @@
             sprite.rotation = -1 * CC_RADIANS_TO_DEGREES(b->GetAngle());
         }        
     }
+    std::vector<b2Body *>toDestroy;
+    std::vector<MyContact>::iterator pos;
+    for(pos = _contactListener->_contacts.begin(); 
+        pos != _contactListener->_contacts.end(); ++pos) {
+        MyContact contact = *pos;
+        
+        b2Body *bodyA = contact.fixtureA->GetBody();
+        b2Body *bodyB = contact.fixtureB->GetBody();
+        
+        if (bodyA->GetUserData() != NULL && bodyB->GetUserData() != NULL) {
+            CCSprite *spriteA = (CCSprite *) bodyA->GetUserData();
+            CCSprite *spriteB = (CCSprite *) bodyB->GetUserData();
+            
+            // Check Collision between player weapon and enemy
+            if (spriteA.tag == PLAYER_WEAPON  && spriteB.tag == ENEMY) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyB) 
+                    == toDestroy.end()) {
+                    toDestroy.push_back(bodyB);
+                }
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
+                    == toDestroy.end()) {
+                    toDestroy.push_back(bodyA);
+                }
+            }
+            
+            // Check Collision between player weapon and enemy
+            if (spriteA.tag == ENEMY  && spriteB.tag == PLAYER_WEAPON) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyB) 
+                    == toDestroy.end()) {
+                    toDestroy.push_back(bodyB);
+                }
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
+                    == toDestroy.end()) {
+                    toDestroy.push_back(bodyA);
+                }
+            }
+            
+            // Check Collision between enemy weapon and player
+            if (spriteA.tag == PLAYER  && spriteB.tag == ENEMY_WEAPON) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyB) 
+                    == toDestroy.end()) {
+                    toDestroy.push_back(bodyB);
+                }
+            }
+            // Check Collision between enemy weapon and player
+            if (spriteA.tag == ENEMY_WEAPON && spriteB.tag == PLAYER) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
+                    == toDestroy.end()) {
+                    toDestroy.push_back(bodyA);
+                }
+            }
+
+        
+        }
+        else if(bodyA->GetUserData() != NULL) {
+            CCSprite *spriteA = (CCSprite *) bodyA->GetUserData();
+            if (spriteA.tag == PLAYER_WEAPON || spriteA.tag == ENEMY_WEAPON) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
+                    == toDestroy.end()) {
+                    toDestroy.push_back(bodyA);
+                }
+            }
+        }
+        else if(bodyB->GetUserData() != NULL) {
+            CCSprite *spriteB = (CCSprite *) bodyB->GetUserData();
+            if (spriteB.tag == PLAYER_WEAPON || spriteB.tag == ENEMY_WEAPON) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyB) 
+                    == toDestroy.end()) {
+                    toDestroy.push_back(bodyB);
+                }
+            }
+        }
+
+
+    }
+    std::vector<b2Body *>::iterator pos2;
+    for(pos2 = toDestroy.begin(); pos2 != toDestroy.end(); ++pos2) {
+        b2Body *body = *pos2;     
+        if (body->GetUserData() != NULL) {
+            CCSprite *sprite = (CCSprite *) body->GetUserData();
+            [self removeChild:sprite cleanup:YES];
+        }
+        _world->DestroyBody(body);
+    }
+}
+
+// on "dealloc" you need to release all your retained objects
+- (void)dealloc {
+    
+    delete _contactListener;
+    delete _world;
+    [super dealloc];
+    
 }
 
 @end

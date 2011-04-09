@@ -8,7 +8,6 @@
 
 #import "Player.h"
 
-
 @implementation Player
 
 +(Player *)playerInWorld:(b2World *)world
@@ -24,7 +23,7 @@
         CGSize winSize = GET_WINSIZE();
 
         // Testing SpriteHelper
-        
+
         int player_positionX = winSize.width/2; 
         int player_positionY = winSize.height/2;
         
@@ -75,14 +74,20 @@
     _playerBody->ApplyAngularImpulse(-8.0f);
 }
 
--(void)fire
+-(Weapon*)fire
 {
-    printf("fire\n");
+    b2World *world = _playerBody->GetWorld();
+    b2Vec2 pos = _playerBody->GetPosition();
+    
+    Weapon *bullet = [[Weapon alloc] initWithWorld:world point:pos angle:_playerBody->GetAngle() size:self.contentSize type:PLAYER_WEAPON];
+    
+    return bullet;
+    
 }
 
 -(void)accelerate
 {
-    float32 magnitude = 8.0f;
+    float32 magnitude = 8.0f ;
     // Calculate current rotation
     float32 rot = _playerBody->GetAngle();
     
@@ -93,6 +98,7 @@
     _playerBody->ApplyLinearImpulse(impulse, pointOfImpulse);
 
 }
+
 
 - (void)dealloc {
     
