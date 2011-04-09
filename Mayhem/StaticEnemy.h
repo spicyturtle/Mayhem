@@ -11,6 +11,7 @@
 #import "Box2D.h"
 
 #import "Common.h"
+#import "Weapon.h"
 
 @interface StaticEnemy : CCSprite {
     b2Body *_body;

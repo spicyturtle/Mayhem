@@ -17,8 +17,8 @@
     b2Fixture *_weaponFixture;
 }
 
-+(Weapon *)WeaponInWorld:(b2World *)world point:(b2Vec2)pos angle:(float32)angle;
++(Weapon *)WeaponInWorld:(b2World *)world point:(b2Vec2)pos angle:(float32)angle size:(CGSize)size type:(int)type;
 
--(id)initWithWorld:(b2World *)world point:(b2Vec2)pos angle:(float32)angle;
+-(id)initWithWorld:(b2World *)world point:(b2Vec2)pos angle:(float32)angle size:(CGSize)size type:(int)type;
 
 @end

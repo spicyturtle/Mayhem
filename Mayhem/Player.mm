@@ -23,7 +23,7 @@
         CGSize winSize = GET_WINSIZE();
 
         // Testing SpriteHelper
-        
+        self.tag = PLAYER;
         int player_positionX = winSize.width/2; //PUT YOUR OWN VALUE HERE
         int player_positionY = winSize.height/2; //PUT YOUR OWN VALUE HERE
 
@@ -77,10 +77,9 @@
 -(Weapon*)fire
 {
     b2World *world = _playerBody->GetWorld();
+    b2Vec2 pos = _playerBody->GetPosition();
     
-    b2Vec2 testpoint = _playerBody->GetPosition();
-    
-    Weapon *bullet = [[Weapon alloc] initWithWorld:world point:testpoint angle:_playerBody->GetAngle()];
+    Weapon *bullet = [[Weapon alloc] initWithWorld:world point:pos angle:_playerBody->GetAngle() size:self.contentSize type:PLAYER_WEAPON];
     
     return bullet;
     

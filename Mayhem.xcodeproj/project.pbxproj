@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F125236134DD9440050418B /* greenLaserRay.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F125235134DD9440050418B /* greenLaserRay.png */; };
 		3F12523A134DF0B90050418B /* redLaserRay.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F125239134DF0B90050418B /* redLaserRay.png */; };
+		3FA4975E134EEEAF0079D2B5 /* MyContactListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4975D134EEEAF0079D2B5 /* MyContactListener.mm */; };
+		3FBA98E9134F559A001F7EB5 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FBA98E8134F559A001F7EB5 /* background.jpg */; };
 		3FEE4D12134CBA9E00208F48 /* Weapon.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3FEE4D11134CBA9E00208F48 /* Weapon.mm */; };
 		CA45CFC8134A4ABC0035A38A /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = CA45CFC7134A4ABC0035A38A /* player.png */; };
 		CA45D049134B25DB0035A38A /* World.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA45D048134B25DB0035A38A /* World.mm */; };
@@ -172,7 +174,6 @@
 		CAF09D141348B8F1002685A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D131348B8F1002685A0 /* main.m */; };
 		CAF09D171348B8F1002685A0 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D161348B8F1002685A0 /* AppDelegate.mm */; };
 		CAF09D1A1348B8F1002685A0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D191348B8F1002685A0 /* RootViewController.m */; };
-		CAF09D1D1348B8F1002685A0 /* HelloWorldLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D1C1348B8F1002685A0 /* HelloWorldLayer.mm */; };
 		CAF09D201348B8F1002685A0 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D1F1348B8F1002685A0 /* GLES-Render.mm */; };
 		CAF09D231348B8F1002685A0 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = CAF09D221348B8F1002685A0 /* blocks.png */; };
 		CAF09D311348BCF1002685A0 /* MainMenuScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = CAF09D301348BCF1002685A0 /* MainMenuScene.mm */; };
@@ -187,6 +188,9 @@
 /* Begin PBXFileReference section */
 		3F125235134DD9440050418B /* greenLaserRay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenLaserRay.png; sourceTree = "<group>"; };
 		3F125239134DF0B90050418B /* redLaserRay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redLaserRay.png; sourceTree = "<group>"; };
+		3FA4975C134EEEAF0079D2B5 /* MyContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyContactListener.h; sourceTree = "<group>"; };
+		3FA4975D134EEEAF0079D2B5 /* MyContactListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyContactListener.mm; sourceTree = "<group>"; };
+		3FBA98E8134F559A001F7EB5 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		3FEE4D10134CBA9E00208F48 /* Weapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weapon.h; sourceTree = "<group>"; };
 		3FEE4D11134CBA9E00208F48 /* Weapon.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Weapon.mm; sourceTree = "<group>"; };
 		CA45CFC7134A4ABC0035A38A /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = Resources/player.png; sourceTree = "<group>"; };
@@ -511,8 +515,6 @@
 		CAF09D161348B8F1002685A0 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		CAF09D181348B8F1002685A0 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		CAF09D191348B8F1002685A0 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		CAF09D1B1348B8F1002685A0 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = HelloWorldLayer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		CAF09D1C1348B8F1002685A0 /* HelloWorldLayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; lineEnding = 0; path = HelloWorldLayer.mm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		CAF09D1E1348B8F1002685A0 /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		CAF09D1F1348B8F1002685A0 /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		CAF09D211348B8F1002685A0 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
@@ -550,6 +552,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FA49761134EEEBE0079D2B5 /* ContactListener */ = {
+			isa = PBXGroup;
+			children = (
+				3FA4975C134EEEAF0079D2B5 /* MyContactListener.h */,
+				3FA4975D134EEEAF0079D2B5 /* MyContactListener.mm */,
+			);
+			name = ContactListener;
+			sourceTree = "<group>";
+		};
+		3FBA98D2134F1225001F7EB5 /* Wall */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Wall;
+			sourceTree = "<group>";
+		};
 		3FEE4D14134CBAA300208F48 /* Weapon */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,12 +654,11 @@
 				CAF09C7D1348B8ED002685A0 /* LICENSE_TouchJSON.txt */,
 				CAF09CA31348B8EE002685A0 /* LICENSE_FontLabel.txt */,
 				CAF09D101348B8F1002685A0 /* LICENSE_Box2D.txt */,
+				3FA49761134EEEBE0079D2B5 /* ContactListener */,
 				CAF09D151348B8F1002685A0 /* AppDelegate.h */,
 				CAF09D161348B8F1002685A0 /* AppDelegate.mm */,
 				CAF09D181348B8F1002685A0 /* RootViewController.h */,
 				CAF09D191348B8F1002685A0 /* RootViewController.m */,
-				CAF09D1B1348B8F1002685A0 /* HelloWorldLayer.h */,
-				CAF09D1C1348B8F1002685A0 /* HelloWorldLayer.mm */,
 				CAF09D1E1348B8F1002685A0 /* GLES-Render.h */,
 				CAF09D1F1348B8F1002685A0 /* GLES-Render.mm */,
 				CAF09D211348B8F1002685A0 /* GameConfig.h */,
@@ -660,6 +677,7 @@
 		CAF09B5E1348B8E6002685A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3FBA98E8134F559A001F7EB5 /* background.jpg */,
 				3F125239134DF0B90050418B /* redLaserRay.png */,
 				3F125235134DD9440050418B /* greenLaserRay.png */,
 				CAD61B34134DBC6D00864A99 /* StaticEnemy.png */,
@@ -1051,6 +1069,7 @@
 		CAF09D3F1348CFDB002685A0 /* GameObjects */ = {
 			isa = PBXGroup;
 			children = (
+				3FBA98D2134F1225001F7EB5 /* Wall */,
 				3FEE4D14134CBAA300208F48 /* Weapon */,
 				CAD61B2F134DBA4800864A99 /* Enemy */,
 				CA45D043134B1EEB0035A38A /* World */,
@@ -1142,6 +1161,7 @@
 				CAD61B35134DBC6D00864A99 /* StaticEnemy.png in Resources */,
 				3F125236134DD9440050418B /* greenLaserRay.png in Resources */,
 				3F12523A134DF0B90050418B /* redLaserRay.png in Resources */,
+				3FBA98E9134F559A001F7EB5 /* background.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1284,7 +1304,6 @@
 				CAF09D141348B8F1002685A0 /* main.m in Sources */,
 				CAF09D171348B8F1002685A0 /* AppDelegate.mm in Sources */,
 				CAF09D1A1348B8F1002685A0 /* RootViewController.m in Sources */,
-				CAF09D1D1348B8F1002685A0 /* HelloWorldLayer.mm in Sources */,
 				CAF09D201348B8F1002685A0 /* GLES-Render.mm in Sources */,
 				CAF09D311348BCF1002685A0 /* MainMenuScene.mm in Sources */,
 				CAF09D341348BD99002685A0 /* MainMenuLayer.mm in Sources */,
@@ -1295,6 +1314,7 @@
 				CA45D04D134B27D80035A38A /* GUILayer.mm in Sources */,
 				3FEE4D12134CBA9E00208F48 /* Weapon.mm in Sources */,
 				CAD61B33134DBA6E00864A99 /* StaticEnemy.mm in Sources */,
+				3FA4975E134EEEAF0079D2B5 /* MyContactListener.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
