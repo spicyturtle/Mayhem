@@ -22,73 +22,46 @@
         // Get winSize
         CGSize winSize = GET_WINSIZE();
         
-        // Set touch enabled
-        self.isTouchEnabled = YES;
-        
         // Create button sprites
-        
         // Turn Left
         MenuButton *leftButton = [MenuButton buttonFromFile:@"ButtonLeft.png" Target:player selector:@selector(turnLeft)];
         leftButton.position = ccp(60.0, 60.0);
         [self addChild:leftButton];
         
         // Turn Right
+        MenuButton *rightButton = [MenuButton buttonFromFile:@"ButtonRight.png" Target:player selector:@selector(turnRight)];
+        rightButton.position = ccp(120.0, 60.0);
+        [self addChild:rightButton];
         
         // Fire
+        MenuButton *fireButton = [MenuButton buttonFromFile:@"ButtonFire.png" Target:player selector:@selector(fire)];
+        fireButton.position = ccp(winSize.width - 60.0, 60.0);
+        [self addChild:fireButton];
         
         // Accelerate
-        
-        /*
-        
-        // Create the four controller buttons
-        // Turn left
-        CCMenuItem *turnLeftButton;
-        turnLeftButton = [CCMenuItemImage itemFromNormalImage:@"ButtonLeft.png" selectedImage:@"ButtonLeftSel.png" target:player selector:@selector(turnLeft)];
-        turnLeftButton.position = ccp(60,60);
-
-        // Turn right
-        CCMenuItem *turnRightButton;
-        turnRightButton = [CCMenuItemImage itemFromNormalImage:@"ButtonRight.png" selectedImage:@"ButtonRightSel.png" target:player selector:@selector(turnRight)];
-        turnRightButton.position = ccp(120,60);
-        
-        // Fire
-        CCMenuItem *fireButton;
-        fireButton = [CCMenuItemImage itemFromNormalImage:@"ButtonFire.png" selectedImage:@"ButtonFireSel.png" target:player selector:@selector(fire)];
-        fireButton.position = ccp(winSize.width - 60 ,60);  
-        
-        // Thrust
-        CCMenuItem *accelerateButton;
-        accelerateButton = [CCMenuItemImage itemFromNormalImage:@"ButtonAccelerate.png" selectedImage:@"ButtonAccelerateSel.png" target:player selector:@selector(accelerate)];
-        accelerateButton.position = ccp(winSize.width - 120 ,60);
-        
-        // Create Menu with all items and add to layer
-        CCMenu *gui;
-        gui = [CCMenu menuWithItems:turnLeftButton, turnRightButton, accelerateButton, fireButton , nil];
-        gui.position = CGPointZero;
-        
-        [self addChild:gui];
-         
-         */
+        MenuButton *accelerateButton = [MenuButton buttonFromFile:@"ButtonAccelerate.png" Target:player selector:@selector(accelerate)];
+        accelerateButton.position = ccp(winSize.width - 120.0, 60.0);
+        [self addChild:accelerateButton];
     }
     return self;
 }
 
--(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    printf("Began\n");
-    
-    // Check to see if a button was pressed
-    
-}
-
--(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    printf("Ended\n");    
-}
-
--(void)ccTouchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    printf("Canceled\n");
-}
+//-(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    printf("Began\n");
+//    
+//    // Check to see if a button was pressed
+//    
+//}
+//
+//-(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    printf("Ended\n");    
+//}
+//
+//-(void)ccTouchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    printf("Canceled\n");
+//}
 
 @end

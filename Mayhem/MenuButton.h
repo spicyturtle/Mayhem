@@ -12,9 +12,11 @@
 @interface MenuButton : CCSprite <CCTargetedTouchDelegate> {
     id _target;
     SEL _selector;
-    
+    CGRect _rect;
     NSInvocation *invocation;
 }
+
+@property (nonatomic) CGRect rect;
 
 -(id)initWithFile:(NSString *)filename Target: (id)t selector: (SEL) s;
 

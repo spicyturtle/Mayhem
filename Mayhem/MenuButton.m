@@ -11,6 +11,8 @@
 
 @implementation MenuButton
 
+@synthesize rect = _rect;
+
 +(MenuButton *)buttonFromFile:(NSString *)filename Target:(id)t selector:(SEL)s
 {
     return [[self alloc] initWithFile:filename Target:t selector:s];
@@ -22,6 +24,8 @@
         
         _target = t;
         _selector = s;
+        CGSize sz = [self contentSize];
+        _rect = CGRectMake(-sz.width/2, -sz.height/2, sz.width, sz.height);
         
         NSMethodSignature *sig = nil;
         
@@ -54,18 +58,20 @@
 	[super onExit];
 }
 
-
 - (BOOL)containsTouchLocation:(UITouch *)touch
 {
 	// TODO: Implement!
     // CGRectContainsPoint works, but is for rect...
     // Returns true if touch point within button area,
-    return true;
+    return CGRectContainsPoint(_rect, [self convertTouchToNodeSpaceAR:touch]);
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
 	// Call the function initiated with ( [taget selector] ).
+    
+    if (![self containsTouchLocation:touch]) return NO;
+    
     [invocation invoke];
     return YES;
 }
