@@ -21,30 +21,6 @@
     if (self) {
         // Get winSize
         CGSize winSize = GET_WINSIZE();
-        /*
-        // Create button sprites
-        // Turn Left
-        MenuButton *leftButton = [MenuButton buttonFromFile:@"ButtonLeft.png" Target:player selector:@selector(turnLeft)];
-        leftButton.position = ccp(60.0, 60.0);
-        [self addChild:leftButton];
-        
-        // Turn Right
-        MenuButton *rightButton = [MenuButton buttonFromFile:@"ButtonRight.png" Target:player selector:@selector(turnRight)];
-        rightButton.position = ccp(120.0, 60.0);
-        [self addChild:rightButton];
-        
-        // Fire
-        MenuButton *fireButton = [MenuButton buttonFromFile:@"ButtonFire.png" Target:player selector:@selector(fire)];
-        fireButton.position = ccp(winSize.width - 60.0, 60.0);
-        [self addChild:fireButton];
-        
-        
-        // Accelerate
-        MenuButton *accelerateButton = [MenuButton buttonFromFile:@"ButtonAccelerate.png" Target:player selector:@selector(accelerate)];
-        accelerateButton.position = ccp(winSize.width - 120.0, 60.0);
-        [self addChild:accelerateButton];
-
-        */
         
         // Create the four controller buttons
         // Turn left
