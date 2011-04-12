@@ -97,7 +97,7 @@
 		startSizeVar = 2.0f;
 		endSize = kCCParticleStartSizeEqualToEndSize;
 
-		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"fire.png"];
+		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"texture.png"];
 
 		// additive
 		self.blendAdditive = NO;
@@ -177,7 +177,7 @@
 		endColorVar.b = 0.0f;
 		endColorVar.a = 0.0f;
 		
-		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"fire.png"];
+		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"texture.png"];
 		
 		// additive
 		self.blendAdditive = YES;
@@ -260,7 +260,7 @@
 		endColorVar.b = 0.0f;
 		endColorVar.a = 0.0f;
 		
-		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"fire.png"];
+		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"texture.png"];
 	}
 		
 	return self;
@@ -340,7 +340,7 @@
 		endColorVar.b = 0.0f;
 		endColorVar.a = 0.0f;
 		
-		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"fire.png"];
+		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"texture.png"];
 
 		// additive
 		self.blendAdditive = YES;
@@ -423,7 +423,7 @@
 		endColorVar.b = 0.0f;
 		endColorVar.a = 0.0f;
 		
-		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"fire.png"];
+		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"texture.png"];
 
 		// additive
 		self.blendAdditive = YES;
@@ -506,7 +506,7 @@
 		endColorVar.b = 0.0f;
 		endColorVar.a = 0.0f;
 		
-		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"fire.png"];
+		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"texture.png"];
 		
 		// additive
 		self.blendAdditive = YES;
@@ -589,7 +589,7 @@
 		endColorVar.b = 0.5f;
 		endColorVar.a = 0.0f;
 		
-		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"fire.png"];
+		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"texture.png"];
 
 		// additive
 		self.blendAdditive = NO;
@@ -671,7 +671,7 @@
 		endColorVar.b = 0.5f;
 		endColorVar.a = 0.0f;
 		
-		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"fire.png"];
+		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"texture.png"];
 
 		// additive
 		self.blendAdditive = NO;
@@ -750,7 +750,7 @@
 		endColorVar.b = 0.0f;
 		endColorVar.a = 0.0f;
 		
-		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"fire.png"];
+		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"texture.png"];
 		
 		// additive
 		self.blendAdditive = NO;
@@ -832,7 +832,7 @@
 		endColorVar.b = 0.0f;
 		endColorVar.a = 0.0f;
 		
-		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"fire.png"];
+		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"texture.png"];
 		
 		// additive
 		self.blendAdditive = NO;
@@ -914,7 +914,7 @@
 		endColorVar.b = 0.0f;
 		endColorVar.a = 0.0f;
 		
-		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"fire.png"];
+		self.texture = [[CCTextureCache sharedTextureCache] addImage: @"texture.png"];
 		
 		// additive
 		self.blendAdditive = NO;

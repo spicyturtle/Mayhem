@@ -18,7 +18,7 @@
     b2Fixture *_playerFixture;
     
     CCParticleFire *_particleEmitter;
-
+    CCTexture2D *_particleTexture;
     float _fuel;
 }
 
@@ -32,6 +32,7 @@
 -(void) turnRight;
 -(Weapon*) fire;
 -(void) accelerate;
+-(void) thrustExplosion:(b2Vec2) direction;
 -(float32)getAngle;
 -(void) refuel;
 

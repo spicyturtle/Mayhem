@@ -52,14 +52,7 @@
         // Add objects to layer here
         self.player = player;
         [self addChild:_player];
-        
-        pe = [[CCParticleFire alloc] init];
-        pe.texture = [[CCTextureCache sharedTextureCache] addImage:@"texture.png"];
-        pe.autoRemoveOnFinish = YES;
-        
-        self.player.particleEmitter = pe;
-        [self addChild:pe z:-1];
-        
+    
         LandingPlatform *landingPlatform;
         landingPlatform = [LandingPlatform landingPlatformInWorld:_world];
         [self addChild:landingPlatform];

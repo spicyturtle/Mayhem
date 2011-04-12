@@ -56,6 +56,7 @@
         _playerFixture = _playerBody->CreateFixture(&player_ShapeDef);
         _playerBody->SetAngularDamping(2.0f);
         
+        _particleTexture = [[CCTextureCache sharedTextureCache] addImage:@"texture.png"];
         // Set initial fuel value
         _fuel = FUEL_MAX;
         
@@ -102,12 +103,38 @@
     
     _fuel -= 1.0f;
     
-    [_particleEmitter setPosition:ccp(pointOfImpulse.x*PTM_RATIO, pointOfImpulse.y*PTM_RATIO)];
-    [_particleEmitter setLife:1.0f];
-    
-    
-    
+    [self thrustExplosion:impulse];
+}
 
+-(void) thrustExplosion:(b2Vec2) direction {
+    [_particleEmitter resetSystem];
+    _particleEmitter = [[CCParticleMeteor alloc] init];
+    [_particleEmitter setTexture: _particleTexture];
+    
+    [_particleEmitter setGravity:ccp(-direction.x*500.0, -direction.y*500.0)];
+    [_particleEmitter setSpeed:10.0f];
+    [_particleEmitter setScale:0.5f];
+    [_particleEmitter setTotalParticles:1000];
+    
+    ccColor4F startColor = {0.1f, 0.0f, 1.0f, 1.0f}; 
+    _particleEmitter.startColor = startColor;
+
+    ccColor4F startColorVar = {0.1f, 0.1f, 0.1f, 0.1f};
+    _particleEmitter.startColorVar = startColorVar;
+    
+    ccColor4F endColor = {1.0f, 1.0f, 1.0f, 1.0f};
+    _particleEmitter.endColor = endColor;
+    
+    ccColor4F endColorVar = {0.1f, 0.1f, 0.1f, 0.5f};
+    _particleEmitter.endColorVar = endColorVar;
+
+
+    [_particleEmitter setPosition:ccp(_playerBody->GetPosition().x*PTM_RATIO, _playerBody->GetPosition().y*PTM_RATIO)];
+    [_particleEmitter setLife:0.2f];
+    [_particleEmitter setDuration:0.2f];
+    [self.parent addChild:_particleEmitter z:-1];
+    _particleEmitter.autoRemoveOnFinish = YES;
+    
 }
 
 -(float32)getAngle{
