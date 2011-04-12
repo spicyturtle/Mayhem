@@ -76,29 +76,12 @@
         // Create Menu with all items and add to layer
         CCMenu *gui;
         gui = [CCMenu menuWithItems:turnLeftButton, turnRightButton, accelerateButton, fireButton , nil];
-        gui.position = CGPointZero;
+        [gui setPosition: CGPointZero];
+        [gui setOpacity:100];
         
         [self addChild:gui];
     }
     return self;
 }
-
-//-(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    printf("Began\n");
-//    
-//    // Check to see if a button was pressed
-//    
-//}
-//
-//-(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    printf("Ended\n");    
-//}
-//
-//-(void)ccTouchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    printf("Canceled\n");
-//}
 
 @end
