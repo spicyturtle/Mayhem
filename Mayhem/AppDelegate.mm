@@ -12,6 +12,7 @@
 #import "GameConfig.h"
 #import "MainMenuScene.h"
 #import "RootViewController.h"
+#import "GameOverScene.h"
 
 @implementation AppDelegate
 

@@ -13,6 +13,7 @@
 #import "GUILayer.h"
 #import "Player.h"
 #import "World.h"
+#import "HUDLayer.h"
 
 @interface TestScene : CCScene 
 {

@@ -5,7 +5,6 @@
 //  Created by Tor Kreutzer on 4/5/11.
 //  Copyright 2011 UiT. All rights reserved.
 //
-
 // Pixel to Meter ratio
 #define PTM_RATIO 32.0
 
@@ -18,10 +17,12 @@ enum {
     ENEMY,
     ENEMY_WEAPON,
     FUEL,
-    OBSTACLE
+    OBSTACLE,
+    PLATFORM
 };
 
-#define ENEMY_WEAPON_VELOCITY 10.0f;
-#define PLAYER_WEAPON_VELOCITY 42.0f;
-
+#define ENEMY_WEAPON_VELOCITY 10.0f
+#define PLAYER_WEAPON_VELOCITY 42.0f
+#define FUEL_MAX 100
+#define HUD 5
 

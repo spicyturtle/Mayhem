@@ -36,6 +36,9 @@
     TestLayer *layer = [TestLayer layerWithWorld:scene->_world andPlayer:scene->_player];
     [scene  addChild:layer];
     
+    HUDLayer *hud = [HUDLayer HUDToPlayer:scene.player];
+    [scene addChild:hud];
+    
     // Add  GUILayer that reacts with the player.
     GUILayer *gui = [GUILayer GUIToPlayer:scene.player];
     [scene addChild:gui];

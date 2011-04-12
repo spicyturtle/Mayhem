@@ -76,7 +76,6 @@
         // Set linear impulse in rotational direction
         b2Vec2 impulse = b2Vec2(magnitude*cosf(angle + M_PI/2), magnitude*sinf(angle+ M_PI/2));
         
-        
         b2Vec2 pointOfImpulse = _weaponBody->GetPosition();
         _weaponBody->SetLinearVelocity(impulse);
     }

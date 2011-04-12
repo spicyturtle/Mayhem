@@ -17,17 +17,22 @@
     b2Body *_playerBody;
     b2Fixture *_playerFixture;
     
+    CCParticleFire *_particleEmitter;
+
     float _fuel;
 }
 
 +(Player *)playerInWorld:(b2World *)world;
 
 -(id)initWithWorld:(b2World *)world;
-
+@property (nonatomic) float fuel;
+@property (nonatomic, assign) CCParticleFire *particleEmitter;
 // Control methods
 -(void) turnLeft;
 -(void) turnRight;
 -(Weapon*) fire;
 -(void) accelerate;
+-(float32)getAngle;
+-(void) refuel;
 
 @end

@@ -14,7 +14,7 @@
 
 
 // Macros for world constants
-#define GRAVITY b2Vec2(0.0f, -0.5f)
+#define GRAVITY b2Vec2(0.0f, -1.0f)
 #define DOSLEEP true
 
 

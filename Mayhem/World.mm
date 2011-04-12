@@ -13,7 +13,7 @@
 
 +(b2World *)getWorld
 {
-    CGSize winSize = CGSizeMake(1920.0f, 1200.0f);
+    CGSize winSize = CGSizeMake(1280.0f, 800.0f);
     
     b2World *world = new b2World(GRAVITY, DOSLEEP);
     

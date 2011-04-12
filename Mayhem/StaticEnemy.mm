@@ -47,7 +47,7 @@
         _body->SetLinearVelocity(b2Vec2(0.0f,0.5f));
         
         
-        [self schedule:@selector(enemyGameLogic:) interval:0.0f];
+        [self schedule:@selector(enemyGameLogic:) interval:0.5f];
         
     }
     return self;

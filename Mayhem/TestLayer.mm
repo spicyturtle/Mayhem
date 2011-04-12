@@ -39,18 +39,29 @@
     self = [super initWithColor:ccc4(0, 0, 0, 0)];
     if (self) {
         
-        CGSize winSize = CGSizeMake(1920.0f, 1200.0f);
+        CGSize winSize = CGSizeMake(1280.0f, 800.0f);
         
         _world = world;
         
-        CCSprite* background = [CCSprite spriteWithFile:@"background.jpg"];
+        CCSprite* background = [CCSprite spriteWithFile:@"background720.jpg"];
         background.tag = 1;
         background.anchorPoint = CGPointMake(0, 0);
-        [self addChild:background];
-
+        [self addChild:background z:-2];
+        
         // Add objects to layer here
         self.player = player;
         [self addChild:_player];
+        
+        pe = [[CCParticleFire alloc] init];
+        pe.texture = [[CCTextureCache sharedTextureCache] addImage:@"texture.png"];
+        pe.life = 0.1f;
+        pe.duration = 0.1f;
+        self.player.particleEmitter = pe;
+        [self addChild:pe z:-1];
+        
+        LandingPlatform *landingPlatform;
+        landingPlatform = [LandingPlatform landingPlatformInWorld:_world];
+        [self addChild:landingPlatform];
         
         // Add Contact Listener
         _contactListener = new MyContactListener();
@@ -59,6 +70,15 @@
         StaticEnemy *enemy1;
         enemy1 = [StaticEnemy enemyInWorld:_world];
         [self addChild:enemy1];
+        
+        StaticEnemy *enemy2;
+        enemy2 = [StaticEnemy enemyInWorld:_world];
+        [self addChild:enemy2];
+        
+        Obstacle *obstacle1;
+        obstacle1 = [Obstacle obstacleInWorld:_world];
+        
+        [self addChild:obstacle1];
         
         [self runAction:[CCFollow actionWithTarget:_player worldBoundary:CGRectMake(0, 0, winSize.width, winSize.height)]];
         
@@ -70,6 +90,7 @@
 
 -(void)tick:(ccTime) dt
 {
+    BOOL enemyLeft = false;
     _world->Step(dt, 10, 10);    
     for(b2Body *b = _world->GetBodyList(); b; b=b->GetNext()) {    
         if (b->GetUserData() != NULL) {
@@ -77,7 +98,9 @@
             sprite.position = ccp(b->GetPosition().x * PTM_RATIO,
                                   b->GetPosition().y * PTM_RATIO);
             sprite.rotation = -1 * CC_RADIANS_TO_DEGREES(b->GetAngle());
-        }        
+            if (sprite.tag == ENEMY) enemyLeft = true;
+        }  
+        
     }
     std::vector<b2Body *>toDestroy;
     std::vector<MyContact>::iterator pos;
@@ -130,8 +153,26 @@
                     toDestroy.push_back(bodyA);
                 }
             }
-
-        
+            // Check Collision between fuelpad and player
+            if (spriteA.tag == PLATFORM && spriteB.tag == PLAYER) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
+                    == toDestroy.end()) {
+                    float32 angle = [self.player getAngle];
+                    if (angle < 90 || angle > 270) {                       
+                        [self.player refuel];
+                    }
+                }
+            }
+            // Check Collision between fuelpad and player
+            if (spriteA.tag == PLAYER && spriteB.tag == PLATFORM) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
+                    == toDestroy.end()) {
+                    float32 angle = [self.player getAngle];
+                    if (angle < 90 || angle > 270) {
+                        [self.player refuel];
+                    }
+                }
+            }
         }
         else if(bodyA->GetUserData() != NULL) {
             CCSprite *spriteA = (CCSprite *) bodyA->GetUserData();
@@ -163,6 +204,24 @@
         }
         _world->DestroyBody(body);
     }
+    
+    
+    if (!enemyLeft) {
+        GameOverScene *gameOverScene = [GameOverScene node];
+        [gameOverScene.layer.label setString:@"You Win :]"];
+        [[CCDirector sharedDirector] replaceScene:gameOverScene];
+        
+    }
+    else if(_player.fuel <= 0.0) {
+        GameOverScene *gameOverScene = [GameOverScene node];
+        [gameOverScene.layer.label setString:@"You Lose :["];
+        [[CCDirector sharedDirector] replaceScene:gameOverScene];
+        
+    }
+    
+    
+    
+    
 }
 
 // on "dealloc" you need to release all your retained objects

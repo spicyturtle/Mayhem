@@ -9,6 +9,8 @@
 #import "Player.h"
 
 @implementation Player
+@synthesize fuel = _fuel;
+@synthesize particleEmitter = _particleEmitter;
 
 +(Player *)playerInWorld:(b2World *)world
 {
@@ -17,8 +19,9 @@
 
 - (id)initWithWorld:(b2World *) world {
     
-    self = [super initWithFile:@"player.png" rect:CGRectMake(2, 2, 61, 59)];
+    self = [super initWithFile:@"player.png" rect:CGRectMake(2, 2, 30, 44)];
     if (self) {
+         self.tag = PLAYER;
         
         CGSize winSize = GET_WINSIZE();
 
@@ -37,27 +40,28 @@
         b2PolygonShape player_Shape;
         int dimension = 7;
         b2Vec2 vertices[] = {
-            b2Vec2(14.516872f / PTM_RATIO, -28.650311f / PTM_RATIO),
-            b2Vec2(29.641876f / PTM_RATIO, -17.025311f / PTM_RATIO),
-            b2Vec2(29.266876f / PTM_RATIO, -0.650311f / PTM_RATIO),
-            b2Vec2(-0.108128f / PTM_RATIO, 29.224689f / PTM_RATIO),
-            b2Vec2(-29.733126f / PTM_RATIO, -1.025311f / PTM_RATIO),
-            b2Vec2(-29.358126f / PTM_RATIO, -16.900307f / PTM_RATIO),
-            b2Vec2(-14.483126f / PTM_RATIO, -28.775307f / PTM_RATIO)};
+            b2Vec2(12.875000f / PTM_RATIO, 2.000000f / PTM_RATIO),
+            b2Vec2(0.250000f / PTM_RATIO, 21.250000f / PTM_RATIO),
+            b2Vec2(-13.500000f / PTM_RATIO, 0.250000f / PTM_RATIO),
+            b2Vec2(-13.375000f / PTM_RATIO, -12.125000f / PTM_RATIO),
+            b2Vec2(-4.875000f / PTM_RATIO, -18.750000f / PTM_RATIO),
+            b2Vec2(4.625000f / PTM_RATIO, -18.875000f / PTM_RATIO),
+            b2Vec2(12.875000f / PTM_RATIO, -13.750000f / PTM_RATIO)};
         player_Shape.Set(vertices, dimension);
         b2FixtureDef player_ShapeDef;
         player_ShapeDef.shape = &player_Shape;
-        player_ShapeDef.density = 5.0f;
+        player_ShapeDef.density = 10.0f;
         player_ShapeDef.friction = 0.5f;
         player_ShapeDef.restitution = 0.1f;
         _playerFixture = _playerBody->CreateFixture(&player_ShapeDef);
-        // end
-        
-        
-        _playerBody->SetAngularDamping(1.0f);
+        _playerBody->SetAngularDamping(2.0f);
         
         // Set initial fuel value
-        _fuel = 10.0f;
+        _fuel = FUEL_MAX;
+        
+        
+        [self schedule:@selector(playerGameLogic:) interval:1.0f];
+
     }
     
     return self;
@@ -65,13 +69,12 @@
 
 -(void)turnLeft
 {
-    _playerBody->ApplyAngularImpulse(8.0f);
-    
+    _playerBody->ApplyAngularImpulse(2.0f);
 }
 
 -(void)turnRight
 {
-    _playerBody->ApplyAngularImpulse(-8.0f);
+    _playerBody->ApplyAngularImpulse(-2.0f);
 }
 
 -(Weapon*)fire
@@ -87,7 +90,7 @@
 
 -(void)accelerate
 {
-    float32 magnitude = 8.0f ;
+    float32 magnitude = 16.0f ;
     // Calculate current rotation
     float32 rot = _playerBody->GetAngle();
     
@@ -96,7 +99,27 @@
     
     b2Vec2 pointOfImpulse = _playerBody->GetPosition();
     _playerBody->ApplyLinearImpulse(impulse, pointOfImpulse);
+    
+    _fuel -= 1.0f;
+    
+    _particleEmitter.position = ccp(pointOfImpulse.x*PTM_RATIO, pointOfImpulse.y*PTM_RATIO);
 
+}
+
+-(float32)getAngle{
+    float32 radians = _playerBody->GetAngle();
+    float32 angle = float32((int(radians*180/M_PI))%360);
+    return abs(angle);
+}
+-(void)playerGameLogic:(ccTime)dt {
+    
+
+}
+
+-(void)refuel {
+    if(_fuel < FUEL_MAX)
+        _fuel += 0.5f;
+    
 }
 
 
