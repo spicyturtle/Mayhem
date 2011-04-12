@@ -18,8 +18,8 @@
     b2Fixture *_fixture;
 }
 
-+(StaticEnemy *)enemyInWorld:(b2World *)world;
++(StaticEnemy *)enemyInWorld:(b2World *)world atX:(float)x andY:(float) y;
 
--(id)initWithWorld:(b2World *)world;
+-(id)initWithWorld:(b2World *)world atPos:(CGPoint) pos;
 
 @end

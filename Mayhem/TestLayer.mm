@@ -45,7 +45,6 @@
         
         
         CCSprite* background = [CCSprite spriteWithFile:@"background720.jpg"];
-        background.tag = 1;
         background.anchorPoint = CGPointMake(0, 0);
         [self addChild:background z:-2];
         
@@ -62,12 +61,16 @@
         _world->SetContactListener(_contactListener);
         
         StaticEnemy *enemy1;
-        enemy1 = [StaticEnemy enemyInWorld:_world];
+        enemy1 = [StaticEnemy enemyInWorld:_world atX:20.0 andY:20.0];
         [self addChild:enemy1];
         
         StaticEnemy *enemy2;
-        enemy2 = [StaticEnemy enemyInWorld:_world];
+        enemy2 = [StaticEnemy enemyInWorld:_world atX:400.0 andY:600.0];
         [self addChild:enemy2];
+        
+        StaticEnemy *enemy3;
+        enemy3 = [StaticEnemy enemyInWorld:_world atX:700.0 andY:300.0];
+        [self addChild:enemy3];
         
         Obstacle *obstacle1;
         obstacle1 = [Obstacle obstacleInWorld:_world];
@@ -76,7 +79,7 @@
         
         [self runAction:[CCFollow actionWithTarget:_player worldBoundary:CGRectMake(0, 0, winSize.width, winSize.height)]];
         
-        [self schedule:@selector(tick:)];
+        [self schedule:@selector(tick:) interval:1.0/60.0];
     }
     
     return self;
@@ -195,6 +198,20 @@
                 if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
                     == toDestroy.end()) {
                     _player.fuel = -1.0f;
+                }
+            }
+            // Check Collision between obstacle and weapons
+            if ( (spriteA.tag == PLAYER_WEAPON || spriteA.tag == ENEMY_WEAPON) && spriteB.tag == OBSTACLE) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
+                    == toDestroy.end()) {
+                    toDestroy.push_back(bodyA);
+                }
+            }
+            // Check Collision between obstacle and weapons
+            if (spriteA.tag == OBSTACLE && (spriteB.tag == PLAYER_WEAPON || spriteB.tag == ENEMY_WEAPON) ) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
+                    == toDestroy.end()) {
+                    toDestroy.push_back(bodyB);
                 }
             }
         }

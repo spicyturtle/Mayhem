@@ -23,12 +23,10 @@
     if (self) {
          self.tag = PLAYER;
         
-        CGSize winSize = GET_WINSIZE();
-
         // Testing SpriteHelper
 
-        int player_positionX = winSize.width/2; 
-        int player_positionY = winSize.height/2;
+        int player_positionX = 600.0; 
+        int player_positionY = 600.0;
         
         position_ = ccp(player_positionX, player_positionY);
         b2BodyDef player_BodyDef;
