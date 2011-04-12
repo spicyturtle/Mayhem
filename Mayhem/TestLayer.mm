@@ -43,6 +43,7 @@
         
         _world = world;
         
+        
         CCSprite* background = [CCSprite spriteWithFile:@"background720.jpg"];
         background.tag = 1;
         background.anchorPoint = CGPointMake(0, 0);
@@ -54,8 +55,8 @@
         
         pe = [[CCParticleFire alloc] init];
         pe.texture = [[CCTextureCache sharedTextureCache] addImage:@"texture.png"];
-        pe.life = 0.1f;
-        pe.duration = 0.1f;
+        pe.autoRemoveOnFinish = YES;
+        
         self.player.particleEmitter = pe;
         [self addChild:pe z:-1];
         
@@ -144,10 +145,26 @@
                 if (std::find(toDestroy.begin(), toDestroy.end(), bodyB) 
                     == toDestroy.end()) {
                     toDestroy.push_back(bodyB);
+                    _player.fuel -= 10;
                 }
             }
             // Check Collision between enemy weapon and player
             if (spriteA.tag == ENEMY_WEAPON && spriteB.tag == PLAYER) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
+                    == toDestroy.end()) {
+                    toDestroy.push_back(bodyA);
+                    _player.fuel -= 10;
+                }
+            }
+            // Check Collision between enemy weapon and player
+            if (spriteA.tag == PLATFORM  && spriteB.tag == ENEMY_WEAPON) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyB) 
+                    == toDestroy.end()) {
+                    toDestroy.push_back(bodyB);
+                }
+            }
+            // Check Collision between enemy weapon and player
+            if (spriteA.tag == ENEMY_WEAPON && spriteB.tag == PLATFORM) {
                 if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
                     == toDestroy.end()) {
                     toDestroy.push_back(bodyA);
@@ -171,6 +188,20 @@
                     if (angle < 90 || angle > 270) {
                         [self.player refuel];
                     }
+                }
+            }
+            // Check Collision between obstacle and player
+            if (spriteA.tag == PLAYER && spriteB.tag == OBSTACLE) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
+                    == toDestroy.end()) {
+                    _player.fuel = -1.0f;
+                }
+            }
+            // Check Collision between obstacle and player
+            if (spriteA.tag == OBSTACLE && spriteB.tag == PLAYER) {
+                if (std::find(toDestroy.begin(), toDestroy.end(), bodyA) 
+                    == toDestroy.end()) {
+                    _player.fuel = -1.0f;
                 }
             }
         }

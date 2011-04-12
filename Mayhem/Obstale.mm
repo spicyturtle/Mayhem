@@ -24,6 +24,7 @@
         int obstacle_positionY = 400; //PUT YOUR OWN VALUE HERE
         
         self.position = ccp(obstacle_positionX, obstacle_positionY);
+        self.tag = OBSTACLE;
         b2BodyDef obstacle_BodyDef;
         obstacle_BodyDef.type = b2_staticBody;
         obstacle_BodyDef.position.Set(obstacle_positionX/PTM_RATIO, obstacle_positionY/PTM_RATIO);

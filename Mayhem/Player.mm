@@ -102,7 +102,11 @@
     
     _fuel -= 1.0f;
     
-    _particleEmitter.position = ccp(pointOfImpulse.x*PTM_RATIO, pointOfImpulse.y*PTM_RATIO);
+    [_particleEmitter setPosition:ccp(pointOfImpulse.x*PTM_RATIO, pointOfImpulse.y*PTM_RATIO)];
+    [_particleEmitter setLife:1.0f];
+    
+    
+    
 
 }
 
