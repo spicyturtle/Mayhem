@@ -50,7 +50,7 @@
         player_Shape.Set(vertices, dimension);
         b2FixtureDef player_ShapeDef;
         player_ShapeDef.shape = &player_Shape;
-        player_ShapeDef.density = 10.0f;
+        player_ShapeDef.density = 12.0f;
         player_ShapeDef.friction = 0.5f;
         player_ShapeDef.restitution = 0.1f;
         _playerFixture = _playerBody->CreateFixture(&player_ShapeDef);
