@@ -43,7 +43,6 @@
         
         _world = world;
         
-        
         CCSprite* background = [CCSprite spriteWithFile:@"background720.jpg"];
         background.tag = 1;
         background.anchorPoint = CGPointMake(0, 0);
