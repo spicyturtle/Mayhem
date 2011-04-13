@@ -11,13 +11,13 @@
 
 @implementation StaticEnemy
 
-+(StaticEnemy *)enemyInWorld:(b2World *)world
++(StaticEnemy *)enemyInWorld:(b2World *)world atX:(float) x andY:(float)y
 {
-    return [[self alloc] initWithWorld:world];
+    return [[self alloc] initWithWorld:world atPos:CGPointMake(x, y)];
 }
 
 
-- (id)initWithWorld:(b2World *)world {
+- (id)initWithWorld:(b2World *)world atPos:(CGPoint)pos{
     self = [super initWithFile:@"StaticEnemy.png"];
     if (self) {
         // Initialize enemy
@@ -26,7 +26,7 @@
         // Create enemy body
         b2BodyDef bodyDef;
         bodyDef.type = b2_dynamicBody;
-        bodyDef.position.Set(self.contentSize.width/PTM_RATIO, self.contentSize.height/PTM_RATIO);
+        bodyDef.position.Set(pos.x/PTM_RATIO, pos.y/PTM_RATIO);
         bodyDef.userData = self;
         _body = world->CreateBody(&bodyDef);
         
@@ -39,12 +39,12 @@
         shapeDef.shape = &shape;
         shapeDef.density = 1.0f;
         shapeDef.friction = 0.0f;
-        shapeDef.restitution = 0.1f;
+        shapeDef.restitution = 1.0f;
         _fixture = _body->CreateFixture(&shapeDef);
         
         _body->SetAngularDamping(0.0f);
         _body->ApplyAngularImpulse(1.0f);
-        _body->SetLinearVelocity(b2Vec2(0.0f,0.5f));
+        _body->ApplyForce(_body->GetLocalCenter(),b2Vec2(0.0f,1.5f));
         
         
         [self schedule:@selector(enemyGameLogic:) interval:0.5f];

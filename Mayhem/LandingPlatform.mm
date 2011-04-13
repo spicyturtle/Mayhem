@@ -20,8 +20,9 @@
     self = [super initWithFile:@"landingPad.png" rect:CGRectMake(0, 0, 100, 20)];
     if (self) {
         self.tag = PLATFORM;
-        int landing_positionX = 100; //PUT YOUR OWN VALUE HERE
-        int landing_positionY = 100; //PUT YOUR OWN VALUE HERE
+        // Hardcoded!!!
+        int landing_positionX = 300; //PUT YOUR OWN VALUE HERE
+        int landing_positionY = 10; //PUT YOUR OWN VALUE HERE
         CCSprite *landing_Sprite = [CCSprite spriteWithFile:@"landingPad.png" rect:CGRectMake(0,0, 100, 20)];
         landing_Sprite.position = ccp(landing_positionX, landing_positionY);
         b2BodyDef landing_BodyDef;
