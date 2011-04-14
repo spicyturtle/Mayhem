@@ -78,7 +78,7 @@
         
         [self runAction:[CCFollow actionWithTarget:_player worldBoundary:CGRectMake(0, 0, winSize.width, winSize.height)]];
         
-        [self schedule:@selector(tick:) interval:1.0/60.0];
+        [self schedule:@selector(tick:) interval:1.0/120.0];
     }
     
     return self;

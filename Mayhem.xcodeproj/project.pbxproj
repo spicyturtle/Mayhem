@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F125236134DD9440050418B /* greenLaserRay.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F125235134DD9440050418B /* greenLaserRay.png */; };
 		3F12523A134DF0B90050418B /* redLaserRay.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F125239134DF0B90050418B /* redLaserRay.png */; };
+		3F47F1151356DA9C00EBFD84 /* wallsprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F47F1141356DA9C00EBFD84 /* wallsprite.png */; };
 		3F5797E41351BA3600223AC0 /* landingPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5797E31351BA3600223AC0 /* landingPad.png */; };
 		3F5797E81351BB6E00223AC0 /* LandingPlatform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3F5797E71351BB6E00223AC0 /* LandingPlatform.mm */; };
 		3F5797ED1351CDA000223AC0 /* HUDLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3F5797EC1351CDA000223AC0 /* HUDLayer.mm */; };
@@ -199,6 +200,7 @@
 /* Begin PBXFileReference section */
 		3F125235134DD9440050418B /* greenLaserRay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenLaserRay.png; sourceTree = "<group>"; };
 		3F125239134DF0B90050418B /* redLaserRay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redLaserRay.png; sourceTree = "<group>"; };
+		3F47F1141356DA9C00EBFD84 /* wallsprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallsprite.png; sourceTree = "<group>"; };
 		3F5797E31351BA3600223AC0 /* landingPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landingPad.png; sourceTree = "<group>"; };
 		3F5797E61351BB6E00223AC0 /* LandingPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingPlatform.h; sourceTree = "<group>"; };
 		3F5797E71351BB6E00223AC0 /* LandingPlatform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LandingPlatform.mm; sourceTree = "<group>"; };
@@ -750,6 +752,7 @@
 		CAF09B5E1348B8E6002685A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F47F1141356DA9C00EBFD84 /* wallsprite.png */,
 				3F5B63CB1353520100AEEF06 /* texture.png */,
 				3F5B63C913534F7700AEEF06 /* background720.jpg */,
 				3F5B63C6135346FF00AEEF06 /* redobstacle.png */,
@@ -1251,6 +1254,7 @@
 				3F5B63C7135346FF00AEEF06 /* redobstacle.png in Resources */,
 				3F5B63CA13534F7700AEEF06 /* background720.jpg in Resources */,
 				3F5B63CC1353520100AEEF06 /* texture.png in Resources */,
+				3F47F1151356DA9C00EBFD84 /* wallsprite.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1460,9 +1464,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Mayhem/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = Mayhem/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "-lz";
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = Mayhem/libs;
@@ -1478,9 +1486,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Mayhem/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = Mayhem/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "-lz";
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = Mayhem/libs;
