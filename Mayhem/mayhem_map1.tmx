@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="64" height="40" tilewidth="20" tileheight="20">
+ <tileset firstgid="1" name="mayhemtilesprites" tilewidth="20" tileheight="20" spacing="2">
+  <image source="mayhemtilesprites.png" width="64" height="64"/>
+  <tile id="0">
+   <properties>
+    <property name="Collidable" value="True"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Collidable" value="True"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="Collidable" value="True"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="64" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztmW0LwjAMhNvR//+b/WIhnJd0ioO8BYpb7MYel3KXOscYs/ioGs3f/M1fNyrwb8brPZY4rsIv2Tc/aqCVixySY3+u8VkXF8yT51lDWxcyV4WfsVfgt2qgAj9qAf4m2fkz852i+Zs/A//mkJo1SZ59l4V/s0ntloPpWxZ+5GTeFudk5Nd8nOZvMvIzD2f1Nl74mQfTejRWw1gD1jGuEw/Bapdxae+SrfPTmvDEjzqlPfupX7uTwz0AD4Ea9s17XcocTQPRC3gI1ncx/8I0jOUlI16bzf/8Gs3f/M1fN5o/Dv8TehWJ/4n9+OaPwy993D/vGYnf6vuwL7T6hYj+V/sf+87+ltYXZBmsP2J7B+zaF8g/BBo=
+  </data>
+ </layer>
+</map>

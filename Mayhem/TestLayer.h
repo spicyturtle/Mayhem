@@ -28,11 +28,19 @@
     
     // Contact Listener
     MyContactListener *_contactListener;
+    
+    // TileMap
+    CCTMXLayer *_background;
 }
 @property (nonatomic, retain) Player *player;
+@property (nonatomic, retain) CCTMXTiledMap *tileMap;
+@property (nonatomic, retain) CCTMXLayer *background;
 
 +(TestLayer *)layerWithWorld:(b2World *)world andPlayer:(Player *)player;
 
 -(id)initWithWorld: (b2World *)world andPlayer:(Player *)player;
+- (void) addRectAt:(CGPoint)p withSize:(CGPoint)size dynamic:(BOOL)d rotation:(long)r friction:(long)f density:(long)dens restitution:(long)rest boxId:(int)boxId;
+- (void) drawBodyTiles;
+
 
 @end

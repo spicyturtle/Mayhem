@@ -265,7 +265,7 @@
 	}
 	
 	NSAssert( maxGID_ >= tileset_.firstGid &&
-			 minGID_ >= tileset_.firstGid, @"TMX: Only 1 tilset per layer is supported");	
+			 minGID_ >= tileset_.firstGid, @"TMX: Only 1 tilset per layer is supported");
 }
 
 #pragma mark CCTMXLayer - Properties

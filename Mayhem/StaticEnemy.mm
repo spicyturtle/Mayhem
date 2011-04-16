@@ -47,7 +47,7 @@
         _body->ApplyForce(_body->GetLocalCenter(),b2Vec2(0.0f,1.5f));
         
         
-        [self schedule:@selector(enemyGameLogic:) interval:0.5f];
+        [self schedule:@selector(enemyGameLogic:) interval:2.0f];
         
     }
     return self;

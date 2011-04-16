@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0E537C1356E97E00B5DBA3 /* meta_tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E537A1356E97E00B5DBA3 /* meta_tiles.png */; };
+		3F0E537D1356E97E00B5DBA3 /* tmw_desert_spacing.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E537B1356E97E00B5DBA3 /* tmw_desert_spacing.png */; };
+		3F0E53811356EAC100B5DBA3 /* wallsprite2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E537F1356EAC100B5DBA3 /* wallsprite2.png */; };
+		3F0E53821356EAC100B5DBA3 /* wallsprite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E53801356EAC100B5DBA3 /* wallsprite3.png */; };
+		3F0E538D1356EFF700B5DBA3 /* mayhem_map1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E538C1356EFF700B5DBA3 /* mayhem_map1.tmx */; };
+		3F0E538F1356F01A00B5DBA3 /* mayhemtilesprites.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E538E1356F01A00B5DBA3 /* mayhemtilesprites.png */; };
 		3F125236134DD9440050418B /* greenLaserRay.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F125235134DD9440050418B /* greenLaserRay.png */; };
 		3F12523A134DF0B90050418B /* redLaserRay.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F125239134DF0B90050418B /* redLaserRay.png */; };
 		3F47F1151356DA9C00EBFD84 /* wallsprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F47F1141356DA9C00EBFD84 /* wallsprite.png */; };
+		3F47F1371356E86C00EBFD84 /* TileMap.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 3F47F1361356E86C00EBFD84 /* TileMap.tmx */; };
+		3F53B1321356FFF200F3A251 /* floor.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F53B1301356FFF200F3A251 /* floor.png */; };
+		3F53B141135729F000F3A251 /* testmap.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 3F53B140135729F000F3A251 /* testmap.tmx */; };
 		3F5797E41351BA3600223AC0 /* landingPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5797E31351BA3600223AC0 /* landingPad.png */; };
 		3F5797E81351BB6E00223AC0 /* LandingPlatform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3F5797E71351BB6E00223AC0 /* LandingPlatform.mm */; };
 		3F5797ED1351CDA000223AC0 /* HUDLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3F5797EC1351CDA000223AC0 /* HUDLayer.mm */; };
@@ -198,9 +207,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0E537A1356E97E00B5DBA3 /* meta_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meta_tiles.png; sourceTree = "<group>"; };
+		3F0E537B1356E97E00B5DBA3 /* tmw_desert_spacing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmw_desert_spacing.png; sourceTree = "<group>"; };
+		3F0E537F1356EAC100B5DBA3 /* wallsprite2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallsprite2.png; sourceTree = "<group>"; };
+		3F0E53801356EAC100B5DBA3 /* wallsprite3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallsprite3.png; sourceTree = "<group>"; };
+		3F0E538C1356EFF700B5DBA3 /* mayhem_map1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mayhem_map1.tmx; sourceTree = "<group>"; };
+		3F0E538E1356F01A00B5DBA3 /* mayhemtilesprites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mayhemtilesprites.png; sourceTree = "<group>"; };
 		3F125235134DD9440050418B /* greenLaserRay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenLaserRay.png; sourceTree = "<group>"; };
 		3F125239134DF0B90050418B /* redLaserRay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redLaserRay.png; sourceTree = "<group>"; };
 		3F47F1141356DA9C00EBFD84 /* wallsprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallsprite.png; sourceTree = "<group>"; };
+		3F47F1361356E86C00EBFD84 /* TileMap.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TileMap.tmx; sourceTree = "<group>"; };
+		3F53B1301356FFF200F3A251 /* floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floor.png; sourceTree = "<group>"; };
+		3F53B140135729F000F3A251 /* testmap.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = testmap.tmx; sourceTree = "<group>"; };
 		3F5797E31351BA3600223AC0 /* landingPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landingPad.png; sourceTree = "<group>"; };
 		3F5797E61351BB6E00223AC0 /* LandingPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingPlatform.h; sourceTree = "<group>"; };
 		3F5797E71351BB6E00223AC0 /* LandingPlatform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LandingPlatform.mm; sourceTree = "<group>"; };
@@ -752,6 +770,15 @@
 		CAF09B5E1348B8E6002685A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F53B140135729F000F3A251 /* testmap.tmx */,
+				3F53B1301356FFF200F3A251 /* floor.png */,
+				3F0E538E1356F01A00B5DBA3 /* mayhemtilesprites.png */,
+				3F0E537F1356EAC100B5DBA3 /* wallsprite2.png */,
+				3F0E538C1356EFF700B5DBA3 /* mayhem_map1.tmx */,
+				3F0E53801356EAC100B5DBA3 /* wallsprite3.png */,
+				3F0E537A1356E97E00B5DBA3 /* meta_tiles.png */,
+				3F0E537B1356E97E00B5DBA3 /* tmw_desert_spacing.png */,
+				3F47F1361356E86C00EBFD84 /* TileMap.tmx */,
 				3F47F1141356DA9C00EBFD84 /* wallsprite.png */,
 				3F5B63CB1353520100AEEF06 /* texture.png */,
 				3F5B63C913534F7700AEEF06 /* background720.jpg */,
@@ -1255,6 +1282,15 @@
 				3F5B63CA13534F7700AEEF06 /* background720.jpg in Resources */,
 				3F5B63CC1353520100AEEF06 /* texture.png in Resources */,
 				3F47F1151356DA9C00EBFD84 /* wallsprite.png in Resources */,
+				3F47F1371356E86C00EBFD84 /* TileMap.tmx in Resources */,
+				3F0E537C1356E97E00B5DBA3 /* meta_tiles.png in Resources */,
+				3F0E537D1356E97E00B5DBA3 /* tmw_desert_spacing.png in Resources */,
+				3F0E53811356EAC100B5DBA3 /* wallsprite2.png in Resources */,
+				3F0E53821356EAC100B5DBA3 /* wallsprite3.png in Resources */,
+				3F0E538D1356EFF700B5DBA3 /* mayhem_map1.tmx in Resources */,
+				3F0E538F1356F01A00B5DBA3 /* mayhemtilesprites.png in Resources */,
+				3F53B1321356FFF200F3A251 /* floor.png in Resources */,
+				3F53B141135729F000F3A251 /* testmap.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1464,15 +1500,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Mayhem/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Mayhem/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = (
-					"-lz",
-					"-lxml2",
-				);
+				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = Mayhem/libs;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1486,15 +1519,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Mayhem/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Mayhem/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = (
-					"-lz",
-					"-lxml2",
-				);
+				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = Mayhem/libs;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

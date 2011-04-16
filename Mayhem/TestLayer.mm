@@ -11,6 +11,8 @@
 @implementation TestLayer
 
 @synthesize player = _player;
+@synthesize tileMap = _tileMap;
+@synthesize background = _background;
 
 +(TestLayer *)layerWithWorld:(b2World *)world andPlayer:(Player *)player
 {
@@ -47,6 +49,7 @@
         background.anchorPoint = CGPointMake(0, 0);
         [self addChild:background z:-2];
         
+        
         // Add objects to layer here
         self.player = player;
         [self addChild:_player];
@@ -54,6 +57,13 @@
         LandingPlatform *landingPlatform;
         landingPlatform = [LandingPlatform landingPlatformInWorld:_world];
         [self addChild:landingPlatform];
+        
+        //TileMap
+        self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"testmap.tmx"];
+        self.background = [_tileMap layerNamed:@"Background"];
+        [self drawBodyTiles];
+        
+        [self addChild:_tileMap z:-1];
         
         // Add Contact Listener
         _contactListener = new MyContactListener();
@@ -78,11 +88,64 @@
         
         [self runAction:[CCFollow actionWithTarget:_player worldBoundary:CGRectMake(0, 0, winSize.width, winSize.height)]];
         
-        [self schedule:@selector(tick:) interval:1.0/120.0];
+        [self schedule:@selector(tick:)];
     }
     
     return self;
 }
+
+- (void) drawBodyTiles {
+	
+	CCTMXObjectGroup *objects = [_tileMap objectGroupNamed:@"Collisions"];
+	NSMutableDictionary * objPoint;
+	
+	int x ;
+	int y ;
+	int w ;
+	int h ;
+	
+	for (objPoint in [objects objects]) {
+		x = [[objPoint valueForKey:@"x"] intValue];
+		y = [[objPoint valueForKey:@"y"] intValue];
+		w = [[objPoint valueForKey:@"width"] intValue];
+		h = [[objPoint valueForKey:@"height"] intValue];
+		
+		CGPoint _point=ccp(x+w/2,y+h/2);
+		CGPoint _size=ccp(w,h);
+		
+		[self addRectAt:_point withSize:_size dynamic:false rotation:0 friction:10.0f density:1.0f restitution:0 boxId:-1];
+	}
+}
+
+- (void) addRectAt:(CGPoint)p withSize:(CGPoint)size dynamic:(BOOL)d rotation:(long)r friction:(long)f density:(long)dens restitution:(long)rest boxId:(int)boxId
+{
+	CCLOG(@"Add rect %0.2f x %02.f",p.x,p.y);
+	
+	// Define the dynamic body.
+	//Set up a 1m squared box in the physics world
+	b2BodyDef bodyDef;
+	bodyDef.angle = r;
+	
+	if(d)
+		bodyDef.type = b2_dynamicBody;
+	
+	bodyDef.position.Set(p.x/PTM_RATIO, p.y/PTM_RATIO);
+	//bodyDef.userData = sprite;
+	b2Body *body = _world->CreateBody(&bodyDef);
+	
+	// Define another box shape for our dynamic body.
+	b2PolygonShape dynamicBox;
+	dynamicBox.SetAsBox(size.x/2/PTM_RATIO, size.y/2/PTM_RATIO);//These are mid points for our 1m box
+	
+	// Define the dynamic body fixture.
+	b2FixtureDef fixtureDef;
+	fixtureDef.shape = &dynamicBox;	
+	fixtureDef.density = dens;
+	fixtureDef.friction = f;
+	fixtureDef.restitution = rest;
+	body->CreateFixture(&fixtureDef);
+}
+
 
 -(void)tick:(ccTime) dt
 {
@@ -267,6 +330,8 @@
 // on "dealloc" you need to release all your retained objects
 - (void)dealloc {
     
+    self.tileMap = nil;
+    self.background = nil;
     delete _contactListener;
     delete _world;
     [super dealloc];
